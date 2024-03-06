@@ -9,7 +9,6 @@
   justify-content: center;
   background-color: rgb(220, 228, 233);
   overflow: hidden;
-  /* cursor: none; */
 }
 
 .cursor {
@@ -92,8 +91,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* animation: introAnimation 1s;
-  animation-delay: 0.3s; */
+  animation: introAnimation 2s;
+  animation-delay: 0.5s;
 
   transition: 0.5s;
   background-image: url(../../../../public/static/images/pexels-photo-white.jpg);

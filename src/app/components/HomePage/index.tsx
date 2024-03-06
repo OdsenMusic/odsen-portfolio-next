@@ -68,7 +68,7 @@ export default function HomePage() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ ease: "easeOut", duration: 1, delay: 0.1 }}
+      transition={{ ease: "easeOut", duration: 1 }}
       className={styles.viewport}
     >
       {/* <motion.div
