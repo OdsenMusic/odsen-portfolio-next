@@ -93,11 +93,6 @@ export default function HomePage() {
       >
         {popupText}
       </p>
-      {/* {isLoading && (
-        <div className={styles.splashScreen}>
-          <img className={styles.splashScreenLogo} src={logo} />
-        </div>
-      )}{" "} */}
       <div className={styles.perspectiveDiv}>
         <div className={styles.mainContainer}>
           <div className={styles.sideButtons}>
