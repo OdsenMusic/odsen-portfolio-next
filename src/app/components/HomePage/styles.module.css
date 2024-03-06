@@ -100,10 +100,10 @@
   background-repeat: no-repeat;
   background-size: auto;
 
-  box-shadow: inset -371px -232px 2118px 447px rgb(47 81 128 / 26%),
+  /* box-shadow: inset -371px -232px 2118px 447px rgb(47 81 128 / 26%),
     inset -52px -126px 2598px 447px rgb(52 84 121 / 74%),
     inset 526.3px -72px 2578px 447px rgb(236 246 253 / 45%),
-    inset 606.5px 1248px 2578px 447px rgb(164 209 255 / 15%);
+    inset 606.5px 1248px 2578px 447px rgb(164 209 255 / 15%); */
 }
 
 .text {
