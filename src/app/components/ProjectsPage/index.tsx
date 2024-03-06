@@ -13,6 +13,7 @@ export const ProjectsPage: FC = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [popupText, setPopupText] = useState("");
   const [cursorVariant, setCursorVariant] = useState("default");
+  const [isRightContainerOpen, setIsRightContainerOpen] = useState(true);
 
   const useMousePosition = () => {
     const [mousePosition, setMousePosition] = React.useState({
@@ -48,12 +49,14 @@ export const ProjectsPage: FC = () => {
   };
 
   const mousePosition = useMousePosition();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeOut", duration: 0.5 }}
       className={styles.viewport}
+      layout
     >
       <motion.div
         style={{
@@ -65,10 +68,13 @@ export const ProjectsPage: FC = () => {
         animate={cursorVariant}
       ></motion.div>
       <motion.div
+        layout
         initial={{ opacity: 0, translateY: 200 }}
         animate={{ opacity: 1, translateY: 0 }}
-        transition={{ ease: "easeOut", duration: 0.6, delay: 0.4 }}
-        className={styles.mainContainer}
+        transition={{ ease: "easeOut", duration: 0.3 }}
+        className={`${styles.mainContainer} ${
+          isRightContainerOpen && styles.closed
+        }`}
       >
         <ProjectCard
           img={glotonImg.src}
@@ -79,6 +85,8 @@ export const ProjectsPage: FC = () => {
           `}
           href={"https://gloton.netlify.app/"}
           setCursorVariant={setCursorVariant}
+          isRightContainerOpen={isRightContainerOpen}
+          setIsRightContainerOpen={setIsRightContainerOpen}
         />
 
         <ProjectCard
@@ -89,6 +97,8 @@ export const ProjectsPage: FC = () => {
           stack={`          HTML, CSS, JavaScript, React, ExpressJS.
           `}
           href={""}
+          isRightContainerOpen={isRightContainerOpen}
+          setIsRightContainerOpen={setIsRightContainerOpen}
         />
 
         <ProjectCard
@@ -99,8 +109,28 @@ export const ProjectsPage: FC = () => {
           stack={`HTML, CSS, JavaScript, React.
             `}
           href="https://odsencalculator.netlify.app/"
+          isRightContainerOpen={isRightContainerOpen}
+          setIsRightContainerOpen={setIsRightContainerOpen}
         />
       </motion.div>
+      {isRightContainerOpen && (
+        <motion.div
+          initial={{ opacity: 0, translateY: 200 }}
+          animate={{ opacity: 1, translateY: 0 }}
+          transition={{ ease: "easeOut", duration: 0.6, delay: 0.3 }}
+          className={styles.expandedContainer}
+        >
+          {/* <button
+            onClick={() => {
+              setIsRightContainerOpen(false);
+            }}
+          >
+            Close
+          </button> */}
+          <h1>Gloton</h1>
+          <p></p>
+        </motion.div>
+      )}
     </motion.div>
   );
 };

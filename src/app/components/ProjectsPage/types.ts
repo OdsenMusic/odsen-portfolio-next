@@ -5,4 +5,6 @@ export type ProjectCardProps = {
   stack: string;
   href: string;
   setCursorVariant: (variant: string) => void;
+  isRightContainerOpen: boolean;
+  setIsRightContainerOpen: Function;
 };

@@ -10,6 +10,7 @@
   justify-content: center;
   box-shadow: inset -1px 0px 71px 40px rgb(47 81 128 / 26%);
   overflow: hidden;
+  gap: 30px;
 }
 
 .cursor {
@@ -45,4 +46,33 @@
   padding-top: 20px;
   max-width: 900px;
   margin-top: 50px;
+  transition: 0.3;
+}
+
+.expandedContainer {
+  top: 70px;
+  width: 80%;
+
+  background-color: #ffffff76;
+  border-radius: 50px 50px 0 0;
+  backdrop-filter: blur(13px);
+  height: fit-content;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  padding-top: 20px;
+  max-width: 900px;
+  margin-top: 50px;
+  margin-right: 30px;
+}
+
+.mainContainer.closed {
+  width: 450px;
+  margin-left: 30px;
+  transition: 0.3;
 }

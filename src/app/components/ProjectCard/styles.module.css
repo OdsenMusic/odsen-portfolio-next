@@ -7,11 +7,12 @@
   position: relative;
   width: fit-content;
   margin: 30px;
-  background-image: url(../../../../public/static/images/pexels-photo-white-blur.jpg);
+  /* background-image: url(../../../../public/static/images/pexels-photo-white-blur.jpg); */
   background-repeat: no-repeat;
   background-size: auto;
   border-radius: 50px;
   height: 200px;
+  background-color: #485769af;
 }
 
 .subtitle {
@@ -19,7 +20,6 @@
 }
 
 .textContainer {
-  color: rgb(3, 3, 3);
   font-weight: 200;
   width: 50%;
   padding: 30px;
@@ -79,6 +79,18 @@
   filter: saturate(0);
   transition: 0.3s;
   /* transform: translateY(20px); */
+}
+
+.openMore {
+  height: 30px;
+  width: 35px;
+  background-color: white;
+  border: 0;
+  outline: none;
+  margin-right: 20px;
+  margin-top: 20px;
+  border-radius: 100%;
+  align-self: flex-start;
 }
 
 .projectImg:hover {

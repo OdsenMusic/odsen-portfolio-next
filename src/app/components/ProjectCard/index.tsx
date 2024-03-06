@@ -9,6 +9,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   img,
   stack,
   href,
+  isRightContainerOpen,
+  setIsRightContainerOpen,
 }) => {
   return (
     <div className={styles.fullContainer}>
@@ -26,14 +28,27 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </div>
       </a>
-      <div className={styles.textContainer}>
-        <p>
-          {description}
-          <br /> <br />
-          <h3 className={styles.subtitle}>Technology Stack</h3> <br />
-          {stack}{" "}
-        </p>
-      </div>
+      {!isRightContainerOpen && (
+        <>
+          <div className={styles.textContainer}>
+            <p>
+              {description}
+              <br /> <br />
+              <h3 className={styles.subtitle}>Technology Stack</h3> <br />
+              {stack}{" "}
+            </p>
+          </div>
+
+          <button
+            onClick={() => {
+              setIsRightContainerOpen(true);
+            }}
+            className={styles.openMore}
+          >
+            +
+          </button>
+        </>
+      )}
     </div>
   );
 };
