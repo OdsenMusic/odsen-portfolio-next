@@ -1,0 +1,163 @@
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
+import styles from "./styles.module.css";
+import backgroundImg from "../../../../public/static/images/Sin título-1.jpg";
+import logoImg from "../../../../public/static/images/Logo.png";
+import spotifyLogo from "../../../../public/static/images/Spotify_logo_without_text.svg";
+import linkedinLogo from "../../../../public/static/images/LinkedIn_icon_circle.svg";
+import MailIcon from "../../../../public/static/images/mailicon.svg";
+import { motion } from "framer-motion";
+
+export default function HomePage() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+  const [popupText, setPopupText] = useState("");
+  const [cursorVariant, setCursorVariant] = useState("default");
+  const hoverTimeoutRef = useRef(null);
+
+  useEffect(() => {
+    function hideSplashScreen() {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 800);
+    }
+
+    hideSplashScreen();
+  }, []);
+
+  const useMousePosition = () => {
+    const [mousePosition, setMousePosition] = React.useState({
+      x: null,
+      y: null,
+    });
+
+    React.useEffect(() => {
+      const updateMousePosition = (ev: any) => {
+        setMousePosition({ x: ev.clientX, y: ev.clientY });
+      };
+
+      window.addEventListener("mousemove", updateMousePosition);
+
+      return () => {
+        window.removeEventListener("mousemove", updateMousePosition);
+      };
+    }, []);
+
+    return mousePosition;
+  };
+
+  const cursorVariants = {
+    default: {
+      border: "3px solid transparent",
+    },
+
+    hover: {
+      border: "3px solid white",
+    },
+  };
+
+  const mousePosition = useMousePosition();
+
+  const mouseInHandler = (text: any) => {
+    setCursorVariant("hover");
+
+    clearTimeout(hoverTimeoutRef.current);
+    setIsHovered(true);
+    setPopupText(text);
+  };
+
+  const mouseOutHandler = () => {
+    setCursorVariant("default");
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsHovered(false);
+    }, 0);
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ ease: "easeOut", duration: 1, delay: 0.1 }}
+      className={styles.viewport}
+    >
+      <motion.div
+        style={{
+          top: `calc(${JSON.stringify(mousePosition.y)}px + 9px`,
+          left: `calc(${JSON.stringify(mousePosition.x)}px - 8px )`,
+        }}
+        className={styles.cursor}
+        variants={cursorVariants}
+        animate={cursorVariant}
+      >
+        <div
+          className={`${styles.flecha} ${isHovered ? styles.active : ""}`}
+        ></div>
+      </motion.div>
+      <p
+        style={{
+          top: `calc(${JSON.stringify(mousePosition.y)}px - 5px`,
+          left: `calc(${JSON.stringify(mousePosition.x)}px + 100px)`,
+        }}
+        className={`${styles.popupText} ${isHovered ? styles.active : ""}`}
+      >
+        {popupText}
+      </p>
+      {/* {isLoading && (
+        <div className={styles.splashScreen}>
+          <img className={styles.splashScreenLogo} src={logo} />
+        </div>
+      )}{" "} */}
+      <div className={styles.perspectiveDiv}>
+        <div className={styles.mainContainer}>
+          <div className={styles.sideButtons}>
+            <div className={styles.ajedrez}>
+              <div
+                onMouseLeave={() => mouseOutHandler()}
+                onMouseEnter={() => {
+                  mouseInHandler("Projects");
+                }}
+                className={styles.projectButton}
+              >
+                <img className={styles.backgroundImg} src={backgroundImg.src} />
+                <img className={styles.logo} src={logoImg.src} alt="" />
+              </div>{" "}
+            </div>
+            <div className={styles.buttonContainer}>
+              <a
+                href="https://open.spotify.com/intl-es/artist/5u9LEu640uGxBEKnU1PY9V"
+                className={styles.sideButton}
+                onMouseLeave={() => mouseOutHandler()}
+                onMouseEnter={() => {
+                  mouseInHandler("Spotify");
+                }}
+              >
+                <img className={styles.icon} src={spotifyLogo.src} alt="" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/joel-oliver-millan/"
+                onMouseLeave={() => mouseOutHandler()}
+                onMouseEnter={() => {
+                  mouseInHandler("LinkedIn");
+                }}
+                className={styles.sideButton}
+              >
+                <img className={styles.icon} src={linkedinLogo.src} alt="" />
+              </a>
+              <a
+                href="mailto:jolivermillan@gmail.com"
+                onMouseLeave={() => mouseOutHandler()}
+                onMouseEnter={() => {
+                  mouseInHandler("Email");
+                }}
+                className={styles.sideButton}
+              >
+                <img className={styles.icon} src={MailIcon.src} alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
