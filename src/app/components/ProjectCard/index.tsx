@@ -2,9 +2,11 @@ import styles from "./styles.module.css";
 import TechnologyCard from "../TechnologyCard";
 import React from "react";
 import { ProjectCardProps } from "../ProjectsPage/types";
+import { TechnologyCardProps } from "../TechnologyCard/types";
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
-  setCursorVariant,
+type CombinedProps = ProjectCardProps & TechnologyCardProps;
+
+const ProjectCard: React.FC<CombinedProps> = ({
   name,
   description,
   img,
@@ -12,15 +14,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   href,
   isRightContainerOpen,
   setIsRightContainerOpen,
+  react,
+  javascript,
+  html,
+  mongodb,
+  css,
+  express,
 }) => {
   return (
     <div className={styles.fullContainer}>
-      <a
-        onMouseEnter={() => setCursorVariant("hover")}
-        onMouseLeave={() => setCursorVariant("default")}
-        className={styles.link}
-        href={href}
-      >
+      <a className={styles.link} href={href}>
         <div className={styles.mainContainer}>
           <h1 className={styles.projectTitle}>{name}</h1>
 
@@ -36,17 +39,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               {description}
               <br /> <br />
             </p>
-            <TechnologyCard />
+            <div className={styles.bottomContainer}>
+              <TechnologyCard
+                react={react}
+                javascript={javascript}
+                html={html}
+                mongodb={mongodb}
+                express={express}
+                css={css}
+              />
+              <button
+                onClick={() => {
+                  setIsRightContainerOpen(true);
+                }}
+                className={styles.openMore}
+              >
+                +
+              </button>
+            </div>
           </div>
-
-          <button
-            onClick={() => {
-              setIsRightContainerOpen(true);
-            }}
-            className={styles.openMore}
-          >
-            +
-          </button>
         </>
       )}
     </div>

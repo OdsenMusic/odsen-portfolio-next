@@ -1,6 +1,21 @@
 .technologyIcon {
   height: 25px;
-  width: 23px;
+  width: 25px;
+  transition: 0.3s;
+}
+
+.expressIcon {
+  height: 21px;
+}
+
+.reactIcon {
+  height: 26px;
+  width: 26px;
+}
+
+.technologyIcon:hover {
+  scale: 1.2;
+  filter: drop-shadow(0 0px 5px rgb(255, 248, 168));
 }
 
 .mainContainer {

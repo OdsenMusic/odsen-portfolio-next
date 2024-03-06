@@ -6,12 +6,14 @@
   justify-content: center;
   position: relative;
   width: fit-content;
+  max-width: 90%;
   margin: 30px;
   /* background-image: url(../../../../public/static/images/pexels-photo-white-blur.jpg); */
   background-repeat: no-repeat;
   background-size: auto;
   border-radius: 50px;
   height: 200px;
+  margin-right: 50px;
   background-color: #485769af;
 }
 
@@ -60,18 +62,16 @@
 
 .projectTitle {
   font-size: 2rem;
-  color: rgb(113, 113, 113);
+  color: rgb(255 255 255);
   font-weight: 100;
   text-align: left;
   border: 1px solid white;
-
-  background-color: rgba(255, 255, 255, 0.858);
-  backdrop-filter: blur(150px);
+  background-color: rgb(110 123 137 / 64%);
+  backdrop-filter: blur(20px);
   padding: 10px 20px;
   border-radius: 50px;
   position: absolute;
   top: -30px;
-  left: 11%;
   z-index: 99;
 }
 
@@ -83,6 +83,14 @@
   filter: saturate(0);
   transition: 0.3s;
   /* transform: translateY(20px); */
+}
+
+.bottomContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
 }
 
 .openMore {
@@ -98,12 +106,12 @@
   display: flex;
   align-items: center;
   color: black;
-
   justify-content: center;
-  box-shadow: 0 0 30px 4px #4857693b;
-  position: absolute;
-  right: -1%;
-  top: -1%;
+  box-shadow: 0 0 19px 0px #778390;
+  margin-right: 30px;
+  right: 7.5%;
+  top: 60.9%;
+  justify-self: flex-end;
 }
 
 .projectImg:hover {
