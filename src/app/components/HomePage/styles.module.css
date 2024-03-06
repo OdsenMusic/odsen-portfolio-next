@@ -86,7 +86,8 @@
   border: 1px solid red;
 
   height: 2300px;
-  width: 2000px;
+  width: 2200px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,7 +95,7 @@
   transition: 0.5s;
   background-image: url(../../../../public/static/images/pexels-photo-white.jpg);
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
 }
 
 .text {

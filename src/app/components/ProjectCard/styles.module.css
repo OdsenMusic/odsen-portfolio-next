@@ -25,6 +25,10 @@
   padding: 30px;
 }
 
+.textContainer > p {
+  color: white;
+}
+
 .mainContainer {
   border-radius: 50px;
   overflow: visible;
@@ -82,15 +86,24 @@
 }
 
 .openMore {
-  height: 30px;
-  width: 35px;
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-size: 2.5rem;
+  height: 40px;
+  width: 40px;
   background-color: white;
   border: 0;
   outline: none;
-  margin-right: 20px;
-  margin-top: 20px;
   border-radius: 100%;
-  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  color: black;
+
+  justify-content: center;
+  box-shadow: 0 0 30px 4px #4857693b;
+  position: absolute;
+  right: -1%;
+  top: -1%;
 }
 
 .projectImg:hover {

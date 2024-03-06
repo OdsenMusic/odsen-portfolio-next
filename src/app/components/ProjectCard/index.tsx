@@ -1,4 +1,5 @@
 import styles from "./styles.module.css";
+import TechnologyCard from "../TechnologyCard";
 import React from "react";
 import { ProjectCardProps } from "../ProjectsPage/types";
 
@@ -34,9 +35,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <p>
               {description}
               <br /> <br />
-              <h3 className={styles.subtitle}>Technology Stack</h3> <br />
-              {stack}{" "}
             </p>
+            <TechnologyCard />
           </div>
 
           <button

@@ -1,0 +1,18 @@
+.technologyIcon {
+  height: 25px;
+  width: 23px;
+}
+
+.mainContainer {
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.185);
+  display: flex;
+  border: 1px solid white;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.175);
+
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
