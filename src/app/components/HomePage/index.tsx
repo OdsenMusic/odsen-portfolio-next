@@ -14,17 +14,7 @@ export default function HomePage() {
   const [isHovered, setIsHovered] = useState(false);
   const [popupText, setPopupText] = useState("");
   const [cursorVariant, setCursorVariant] = useState("default");
-  const hoverTimeoutRef = useRef(null);
-
-  useEffect(() => {
-    function hideSplashScreen() {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 800);
-    }
-
-    hideSplashScreen();
-  }, []);
+  const hoverTimeoutRef = useRef<any>(null);
 
   const useMousePosition = () => {
     const [mousePosition, setMousePosition] = React.useState({
@@ -32,7 +22,7 @@ export default function HomePage() {
       y: null,
     });
 
-    React.useEffect(() => {
+    useEffect(() => {
       const updateMousePosition = (ev: any) => {
         setMousePosition({ x: ev.clientX, y: ev.clientY });
       };
@@ -45,16 +35,6 @@ export default function HomePage() {
     }, []);
 
     return mousePosition;
-  };
-
-  const cursorVariants = {
-    default: {
-      border: "3px solid transparent",
-    },
-
-    hover: {
-      border: "3px solid white",
-    },
   };
 
   const mousePosition = useMousePosition();
@@ -72,6 +52,16 @@ export default function HomePage() {
     hoverTimeoutRef.current = setTimeout(() => {
       setIsHovered(false);
     }, 0);
+  };
+
+  const cursorVariants = {
+    default: {
+      border: "3px solid transparent",
+    },
+
+    hover: {
+      border: "3px solid white",
+    },
   };
 
   return (
