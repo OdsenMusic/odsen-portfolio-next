@@ -144,3 +144,7 @@ table {
 body {
   background-color: black;
 }
+
+a {
+  cursor: none;
+}

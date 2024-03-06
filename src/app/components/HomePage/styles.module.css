@@ -9,6 +9,7 @@
   justify-content: center;
   background-color: rgb(220, 228, 233);
   overflow: hidden;
+  cursor: none;
 }
 
 .cursor {
@@ -91,18 +92,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: introAnimation 2s;
-  animation-delay: 0.5s;
 
   transition: 0.5s;
   background-image: url(../../../../public/static/images/pexels-photo-white.jpg);
   background-repeat: no-repeat;
   background-size: auto;
-
-  /* box-shadow: inset -371px -232px 2118px 447px rgb(47 81 128 / 26%),
-    inset -52px -126px 2598px 447px rgb(52 84 121 / 74%),
-    inset 526.3px -72px 2578px 447px rgb(236 246 253 / 45%),
-    inset 606.5px 1248px 2578px 447px rgb(164 209 255 / 15%); */
 }
 
 .text {
@@ -140,8 +134,6 @@
   justify-content: center;
 
   transition: 0.3s;
-  /* box-shadow: 27px 23px 19px -7px rgba(0, 27, 67, 0.503),
-    38px 83px 105px -14px rgba(0, 21, 51, 0.503); */
 }
 
 .projectButton::after {
@@ -159,7 +151,6 @@
 .ajedrez::after {
   content: "";
   background-color: rgba(0, 21, 51, 1);
-  /* background-color: red; */
   position: absolute;
   inset: 3rem -1rem -3rem 3rem;
   border-radius: inherit;
@@ -193,7 +184,6 @@
   justify-content: center;
   gap: 5px;
   padding-right: 60px;
-  /* margin-top: 20px; */
 }
 
 .sideButtons {
@@ -217,6 +207,7 @@
   background-repeat: repeat;
   box-shadow: inset -64px -37px 49px -16px rgba(0, 0, 0, 0.17),
     24px 32px 60px -12px rgba(0, 30, 34, 0.562);
+  cursor: none;
 }
 
 .sideButton {
@@ -238,7 +229,6 @@
 .sideButton::after {
   content: "";
   background-color: rgba(0, 21, 51, 1);
-  /* background-color: red; */
   position: absolute;
   inset: 22px 0px 0px 19px;
   border-radius: inherit;
@@ -261,6 +251,7 @@
   height: 70px;
   transition: 0.3s;
   border-radius: 100%;
+  background-color: white;
 }
 
 .backgroundImg {
@@ -287,19 +278,14 @@
   justify-content: center;
   z-index: 100;
   opacity: 0;
-  /* animation: splashScreenAnimation 0.7s; */
 }
 
 .splashScreenLogo {
   height: 200px;
   opacity: 0;
-  /* animation: logoAnimation 0.6s; */
-  /* animation-delay: 0.8s; */
 }
 
 .sideButton:hover > .icon {
-  /* box-shadow: 12px 14px 15px -3px rgba(0, 27, 67, 0.503),
-    20px 18px 53px 15px rgba(0, 21, 51, 0.103); */
   transform: translateX(-15px) translateY(-15px);
 }
 
@@ -318,29 +304,6 @@
     --rotate: -15deg;
     --x: 0px;
     --y: 0px;
-  }
-}
-
-@keyframes splashScreenAnimation {
-  0% {
-    opacity: 1;
-  }
-
-  80% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes logoAnimation {
-  0% {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
   }
 }
 
