@@ -141,8 +141,52 @@
   justify-content: center;
 
   transition: 0.3s;
-  box-shadow: 27px 23px 19px -7px rgba(0, 27, 67, 0.503),
-    38px 83px 105px -14px rgba(0, 21, 51, 0.503);
+  /* box-shadow: 27px 23px 19px -7px rgba(0, 27, 67, 0.503),
+    38px 83px 105px -14px rgba(0, 21, 51, 0.503); */
+}
+
+.projectButton::after {
+  content: "";
+  background-color: rgba(0, 21, 51, 1);
+  position: absolute;
+  inset: 2rem -1rem -1rem 2rem;
+  border-radius: inherit;
+  z-index: -400;
+  opacity: 0.5;
+  filter: blur(10px);
+  transition: 0.3s;
+}
+
+.ajedrez::after {
+  content: "";
+  background-color: rgba(0, 21, 51, 1);
+  /* background-color: red; */
+  position: absolute;
+  inset: 3rem -1rem -3rem 3rem;
+  border-radius: inherit;
+  /* z-index: -400; */
+  opacity: 0.5;
+  filter: blur(30px);
+  transition: 0.3s;
+}
+
+.ajedrez:hover > .projectButton {
+  /* box-shadow: 47px 43px 30px 3px rgba(0, 27, 67, 0.343),
+    58px 103px 130px -14px rgba(0, 21, 51, 0.403); */
+  transform: translateX(-20px) translateY(-20px);
+}
+
+.ajedrez:hover > .projectButton {
+  /* box-shadow: 47px 43px 30px 3px rgba(0, 27, 67, 0.343),
+    58px 103px 130px -14px rgba(0, 21, 51, 0.403); */
+  transform: translateX(-20px) translateY(-20px);
+}
+
+.ajedrez:hover > .projectButton::after {
+  transform: translateX(20px) translateY(20px);
+  scale: 1.03;
+  filter: blur(20px);
+  opacity: 0.4;
 }
 
 .mainContainer {
@@ -212,12 +256,6 @@
 .logo {
   height: 150px;
   transition: 0.3s;
-}
-
-.ajedrez:hover > .projectButton {
-  box-shadow: 47px 43px 30px 3px rgba(0, 27, 67, 0.343),
-    58px 103px 130px -14px rgba(0, 21, 51, 0.403);
-  transform: translateX(-20px) translateY(-20px);
 }
 
 .ajedrez:hover {

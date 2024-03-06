@@ -39,7 +39,7 @@ export default function HomePage() {
 
   const mousePosition = useMousePosition();
 
-  const mouseInHandler = (text: any) => {
+  const mouseInHandler = (text: string) => {
     setCursorVariant("hover");
 
     clearTimeout(hoverTimeoutRef.current);
