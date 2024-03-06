@@ -9,7 +9,7 @@
   justify-content: center;
   background-color: rgb(220, 228, 233);
   overflow: hidden;
-  cursor: none;
+  /* cursor: none; */
 }
 
 .cursor {
@@ -185,8 +185,8 @@
 .ajedrez:hover > .projectButton::after {
   transform: translateX(20px) translateY(20px);
   scale: 1.03;
-  filter: blur(20px);
-  opacity: 0.4;
+  /* filter: blur(20px); */
+  opacity: 0.3;
 }
 
 .mainContainer {
@@ -256,10 +256,6 @@
 .logo {
   height: 150px;
   transition: 0.3s;
-}
-
-.ajedrez:hover {
-  box-shadow: 00px 00px 0px 0 rgba(0, 0, 0, 0);
 }
 
 .splashScreen {

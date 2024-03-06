@@ -71,7 +71,7 @@ export default function HomePage() {
       transition={{ ease: "easeOut", duration: 1, delay: 0.1 }}
       className={styles.viewport}
     >
-      <motion.div
+      {/* <motion.div
         style={{
           top: `calc(${JSON.stringify(mousePosition.y)}px + 9px`,
           left: `calc(${JSON.stringify(mousePosition.x)}px - 8px )`,
@@ -92,7 +92,7 @@ export default function HomePage() {
         className={`${styles.popupText} ${isHovered ? styles.active : ""}`}
       >
         {popupText}
-      </p>
+      </p> */}
       <div className={styles.perspectiveDiv}>
         <div className={styles.mainContainer}>
           <div className={styles.sideButtons}>
