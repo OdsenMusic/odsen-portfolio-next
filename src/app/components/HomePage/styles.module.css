@@ -27,7 +27,6 @@
 }
 
 .popupText {
-  font-family: "Montserrat";
   position: fixed;
   border: 3px solid white;
   font-size: 1.5rem;
@@ -52,7 +51,6 @@
 }
 
 .clock {
-  font-family: "Montserrat";
   position: fixed;
   top: 5vh;
   right: 5vw;

@@ -1,10 +1,12 @@
+"use client";
+
 import styles from "./styles.module.css";
 import { motion } from "framer-motion";
 import ProjectCard from "../ProjectCard";
 import React, { useState, useEffect, useRef } from "react";
-import glotonImg from "../../assets/images/glotonImg.gif";
-import calculatorImg from "../../assets/images/calculatorImg.jpg";
-import taskerImg from "../../assets/images/taskerImg.jpg";
+import glotonImg from "../../../../public/static/images/glotonImg.gif";
+import calculatorImg from "../../../../public/static/images/calculatorImg.jpg";
+import taskerImg from "../../../../public/static/images/taskerImg.jpg";
 
 export default function ProjectsPage() {
   const [isHovered, setIsHovered] = useState(false);
@@ -18,7 +20,7 @@ export default function ProjectsPage() {
     });
 
     React.useEffect(() => {
-      const updateMousePosition = (ev) => {
+      const updateMousePosition = (ev: any) => {
         setMousePosition({ x: ev.clientX, y: ev.clientY });
       };
 
@@ -65,11 +67,10 @@ export default function ProjectsPage() {
         initial={{ opacity: 0, translateY: 200 }}
         animate={{ opacity: 1, translateY: 0 }}
         transition={{ ease: "easeOut", duration: 0.6, delay: 0.4 }}
-        d
         className={styles.mainContainer}
       >
         <ProjectCard
-          img={glotonImg}
+          img={glotonImg.src}
           description={`Biggest project so far. Based off of the Glovo website, its a fully
           functional website with login and able to make purchases.`}
           name={`Gloton`}
@@ -81,7 +82,7 @@ export default function ProjectsPage() {
 
         <ProjectCard
           setCursorVariant={setCursorVariant}
-          img={taskerImg}
+          img={taskerImg.src}
           description={`Note and reminder taking app. Featured with backend, groups, color personalizing and trash bin`}
           name={`Tasker`}
           stack={`          HTML, CSS, JavaScript, React, ExpressJS.
@@ -90,7 +91,7 @@ export default function ProjectsPage() {
 
         <ProjectCard
           setCursorVariant={setCursorVariant}
-          img={calculatorImg}
+          img={calculatorImg.src}
           description={`My first react project. Basic calculator with an excellent design and history.`}
           name={`Calculator`}
           stack={`HTML, CSS, JavaScript, React.
