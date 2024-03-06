@@ -3,13 +3,10 @@
 import styles from "./styles.module.css";
 import { motion, AnimatePresence, easeInOut, easeOut } from "framer-motion";
 import ProjectCard from "../ProjectCard";
-import React, { useState, useEffect, useRef, FC } from "react";
-import { ProjectCardProps } from "./types";
+import React, { useState, FC } from "react";
 import glotonImg from "../../../../public/static/images/glotonImg.gif";
 import calculatorImg from "../../../../public/static/images/calculatorImg.jpg";
 import taskerImg from "../../../../public/static/images/taskerImg.jpg";
-import Image from "next/image";
-import { easeIn } from "framer-motion/dom";
 
 export const ProjectsPage: FC = () => {
   const [isRightContainerOpen, setIsRightContainerOpen] = useState(false);
@@ -31,7 +28,6 @@ export const ProjectsPage: FC = () => {
         }`}
       >
         {" "}
-        <div className={styles.topBar}></div>
         <ProjectCard
           img={glotonImg.src}
           description={`Biggest project so far. Based off of the Glovo website, its a fully
@@ -82,7 +78,7 @@ export const ProjectsPage: FC = () => {
           express={false}
         />
       </motion.div>
-      <AnimatePresence>
+      <AnimatePresence mode="popLayout">
         {isRightContainerOpen && (
           <motion.div
             initial={{ opacity: 0, translateY: 200 }}
