@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./styles.module.css";
 import backgroundImg from "../../../../public/static/images/Sin título-1.jpg";
@@ -10,7 +11,6 @@ import MailIcon from "../../../../public/static/images/mailicon.svg";
 import { motion } from "framer-motion";
 
 export default function HomePage() {
-  const [isLoading, setIsLoading] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
   const [popupText, setPopupText] = useState("");
   const [cursorVariant, setCursorVariant] = useState("default");
@@ -109,8 +109,20 @@ export default function HomePage() {
                 }}
                 className={styles.projectButton}
               >
-                <img className={styles.backgroundImg} src={backgroundImg.src} />
-                <img className={styles.logo} src={logoImg.src} alt="" />
+                <Image
+                  height={400}
+                  width={400}
+                  className={styles.backgroundImg}
+                  src={backgroundImg.src}
+                  alt=""
+                />
+                <Image
+                  height={150}
+                  width={250}
+                  className={styles.logo}
+                  src={logoImg.src}
+                  alt=""
+                />
               </div>{" "}
             </div>
             <div className={styles.buttonContainer}>
@@ -122,7 +134,13 @@ export default function HomePage() {
                   mouseInHandler("Spotify");
                 }}
               >
-                <img className={styles.icon} src={spotifyLogo.src} alt="" />
+                <Image
+                  height={70}
+                  width={70}
+                  className={styles.icon}
+                  src={spotifyLogo.src}
+                  alt=""
+                />
               </a>
               <a
                 href="https://www.linkedin.com/in/joel-oliver-millan/"
@@ -132,7 +150,13 @@ export default function HomePage() {
                 }}
                 className={styles.sideButton}
               >
-                <img className={styles.icon} src={linkedinLogo.src} alt="" />
+                <Image
+                  height={70}
+                  width={70}
+                  className={styles.icon}
+                  src={linkedinLogo.src}
+                  alt=""
+                />
               </a>
               <a
                 href="mailto:jolivermillan@gmail.com"
@@ -142,7 +166,13 @@ export default function HomePage() {
                 }}
                 className={styles.sideButton}
               >
-                <img className={styles.icon} src={MailIcon.src} alt="" />
+                <Image
+                  height={70}
+                  width={70}
+                  className={styles.icon}
+                  src={MailIcon.src}
+                  alt=""
+                />
               </a>
             </div>
           </div>
