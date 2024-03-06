@@ -1,13 +1,15 @@
 import styles from "./styles.module.css";
+import React from "react";
+import { ProjectCardProps } from "../ProjectsPage/types";
 
-export default function ProjectCard({
+const ProjectCard: React.FC<ProjectCardProps> = ({
   setCursorVariant,
   name,
   description,
   img,
   stack,
   href,
-}) {
+}) => {
   return (
     <div className={styles.fullContainer}>
       <a
@@ -34,4 +36,6 @@ export default function ProjectCard({
       </div>
     </div>
   );
-}
+};
+
+export default ProjectCard;

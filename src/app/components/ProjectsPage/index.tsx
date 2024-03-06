@@ -3,12 +3,13 @@
 import styles from "./styles.module.css";
 import { motion } from "framer-motion";
 import ProjectCard from "../ProjectCard";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, FC } from "react";
+import { ProjectCardProps } from "./types";
 import glotonImg from "../../../../public/static/images/glotonImg.gif";
 import calculatorImg from "../../../../public/static/images/calculatorImg.jpg";
 import taskerImg from "../../../../public/static/images/taskerImg.jpg";
 
-export default function ProjectsPage() {
+export const ProjectsPage: FC = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [popupText, setPopupText] = useState("");
   const [cursorVariant, setCursorVariant] = useState("default");
@@ -87,6 +88,7 @@ export default function ProjectsPage() {
           name={`Tasker`}
           stack={`          HTML, CSS, JavaScript, React, ExpressJS.
           `}
+          href={""}
         />
 
         <ProjectCard
@@ -101,4 +103,6 @@ export default function ProjectsPage() {
       </motion.div>
     </motion.div>
   );
-}
+};
+
+export default ProjectsPage;

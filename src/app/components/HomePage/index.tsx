@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
+import React, { useState, useEffect, useRef, FC } from "react";
 import styles from "./styles.module.css";
 import backgroundImg from "../../../../public/static/images/Sin título-1.jpg";
 import logoImg from "../../../../public/static/images/Logo.png";
@@ -10,11 +11,12 @@ import linkedinLogo from "../../../../public/static/images/LinkedIn_icon_circle.
 import MailIcon from "../../../../public/static/images/mailicon.svg";
 import { motion } from "framer-motion";
 
-export default function HomePage() {
+export const HomePage: FC = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [popupText, setPopupText] = useState("");
   const [cursorVariant, setCursorVariant] = useState("default");
   const hoverTimeoutRef = useRef<any>(null);
+  const router = useRouter();
 
   const useMousePosition = () => {
     const [mousePosition, setMousePosition] = React.useState({
@@ -96,7 +98,12 @@ export default function HomePage() {
       <div className={styles.perspectiveDiv}>
         <div className={styles.mainContainer}>
           <div className={styles.sideButtons}>
-            <div className={styles.ajedrez}>
+            <div
+              onClick={() => {
+                router.push("/projects");
+              }}
+              className={styles.ajedrez}
+            >
               <div
                 onMouseLeave={() => mouseOutHandler()}
                 onMouseEnter={() => {
@@ -175,4 +182,6 @@ export default function HomePage() {
       </div>
     </motion.div>
   );
-}
+};
+
+export default HomePage;
