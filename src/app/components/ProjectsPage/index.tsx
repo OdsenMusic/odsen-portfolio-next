@@ -17,6 +17,18 @@ import taskerImg from "../../../../public/static/images/taskerImg.jpg";
 export const ProjectsPage: FC = () => {
   const [isRightContainerOpen, setIsRightContainerOpen] = useState(false);
 
+  const initialTransition = {
+    ease: "easeOut",
+    duration: 0.6,
+    delay: 0.4,
+  };
+
+  const exitTransition = {
+    ease: "easeOut",
+    duration: 0.1,
+    delay: 0,
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -94,13 +106,12 @@ export const ProjectsPage: FC = () => {
             <motion.div
               initial={{ opacity: 0, translateY: 200 }}
               animate={{ opacity: 1, translateY: 0 }}
-              exit={{ opacity: 0, translateY: 200 }}
-              transition={{
-                ease: "easeOut",
-                duration: 0.6,
-
-                exit: { delay: 0, duration: 0.1 },
+              exit={{
+                opacity: 0,
+                translateY: 200,
+                transition: exitTransition,
               }}
+              transition={initialTransition}
               className={styles.expandedContainer}
             >
               <div className={styles.topBar}></div>
