@@ -22,6 +22,8 @@ const ProjectCard: React.FC<CombinedProps> = ({
   mongodb,
   css,
   express,
+  setVisibleProject,
+  project,
 }) => (
   <motion.div
     className={`${styles.fullContainer} ${
@@ -30,7 +32,10 @@ const ProjectCard: React.FC<CombinedProps> = ({
   >
     {!isRightContainerOpen && (
       <button
-        onClick={() => setIsRightContainerOpen(true)}
+        onClick={() => {
+          setIsRightContainerOpen(true);
+          setVisibleProject(project);
+        }}
         className={styles.openMore}
       >
         <img
@@ -40,7 +45,13 @@ const ProjectCard: React.FC<CombinedProps> = ({
         />
       </button>
     )}
-    <a href={href} className={styles.link}>
+    <div
+      onClick={() => {
+        setIsRightContainerOpen(true);
+        setVisibleProject(project);
+      }}
+      className={styles.link}
+    >
       <h1 className={styles.projectTitle}>{name}</h1>
       <div
         className={`${styles.mainContainer} ${
@@ -57,7 +68,7 @@ const ProjectCard: React.FC<CombinedProps> = ({
           />
         </div>
       </div>
-    </a>
+    </div>
     {!isRightContainerOpen && (
       <div className={styles.textContainer}>
         <p>{description}</p>

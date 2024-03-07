@@ -5,4 +5,6 @@ export type ProjectCardProps = {
   href: string;
   isRightContainerOpen: boolean;
   setIsRightContainerOpen: Function;
+  setVisibleProject: Function;
+  project: any;
 };

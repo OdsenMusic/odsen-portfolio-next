@@ -1,5 +1,9 @@
 "use client";
-
+import {
+  glotonProject,
+  taskerProject,
+  calculatorProject,
+} from "@/app/utils/projectData";
 import styles from "./styles.module.css";
 import {
   motion,
@@ -17,6 +21,7 @@ import { ExpandedProject } from "../ExpandedProject";
 
 export const ProjectsPage: FC = () => {
   const [isRightContainerOpen, setIsRightContainerOpen] = useState(false);
+  const [visibleProject, setVisibleProject] = useState(glotonProject);
 
   const initialTransition = {
     ease: "easeOut",
@@ -65,6 +70,8 @@ export const ProjectsPage: FC = () => {
             mongodb={true}
             css={true}
             express={true}
+            setVisibleProject={setVisibleProject}
+            project={glotonProject}
           />
           <ProjectCard
             img={taskerImg.src}
@@ -79,6 +86,8 @@ export const ProjectsPage: FC = () => {
             mongodb={false}
             css={true}
             express={true}
+            setVisibleProject={setVisibleProject}
+            project={taskerProject}
           />
           <ProjectCard
             img={calculatorImg.src}
@@ -93,11 +102,16 @@ export const ProjectsPage: FC = () => {
             mongodb={false}
             css={true}
             express={false}
+            setVisibleProject={setVisibleProject}
+            project={calculatorProject}
           />
         </motion.div>
 
         {isRightContainerOpen && (
-          <ExpandedProject setIsRightContainerOpen={setIsRightContainerOpen} />
+          <ExpandedProject
+            project={visibleProject}
+            setIsRightContainerOpen={setIsRightContainerOpen}
+          />
         )}
       </AnimatePresence>
     </motion.div>
