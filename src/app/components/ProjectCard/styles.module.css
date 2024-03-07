@@ -36,13 +36,18 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  max-width: 350px;
   min-width: 350px;
   height: 200px;
   border: 2px solid white;
   border-radius: 0 50px 50px 50px;
   box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.152);
   overflow: hidden;
+}
+
+.mainContainer.closed {
+  width: 100%;
+  max-width: calc(100% - 2px);
+  min-width: calc(100% - 2px);
 }
 
 .imgContainer {

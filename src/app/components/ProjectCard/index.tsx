@@ -23,7 +23,11 @@ const ProjectCard: React.FC<CombinedProps> = ({
   css,
   express,
 }) => (
-  <motion.div className={styles.fullContainer}>
+  <motion.div
+    className={`${styles.fullContainer} ${
+      isRightContainerOpen && styles.closed
+    }`}
+  >
     {!isRightContainerOpen && (
       <button
         onClick={() => setIsRightContainerOpen(true)}
@@ -38,7 +42,11 @@ const ProjectCard: React.FC<CombinedProps> = ({
     )}
     <a href={href} className={styles.link}>
       <h1 className={styles.projectTitle}>{name}</h1>
-      <div className={styles.mainContainer}>
+      <div
+        className={`${styles.mainContainer} ${
+          isRightContainerOpen && styles.closed
+        }`}
+      >
         <div className={styles.imgContainer}>
           <Image
             height={500}

@@ -99,7 +99,6 @@ export const ProjectsPage: FC = () => {
             css={true}
             express={false}
           />
-          L
         </motion.div>
         <AnimatePresence mode="popLayout">
           {isRightContainerOpen && (
