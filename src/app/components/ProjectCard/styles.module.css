@@ -106,6 +106,12 @@
   right: -5.9%;
   background-color: transparent;
   margin-right: -8px;
+  transition: 0.3s;
+}
+
+.openMore:hover {
+  scale: 1.2;
+  cursor: pointer;
 }
 
 .arrowIcon {

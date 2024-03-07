@@ -13,6 +13,7 @@ import React, { useState, FC } from "react";
 import glotonImg from "../../../../public/static/images/glotonImg.gif";
 import calculatorImg from "../../../../public/static/images/calculatorImg.jpg";
 import taskerImg from "../../../../public/static/images/taskerImg.jpg";
+import { ExpandedProject } from "../ExpandedProject";
 
 export const ProjectsPage: FC = () => {
   const [isRightContainerOpen, setIsRightContainerOpen] = useState(false);
@@ -102,75 +103,9 @@ export const ProjectsPage: FC = () => {
         </motion.div>
         <AnimatePresence mode="popLayout">
           {isRightContainerOpen && (
-            <motion.div
-              initial={{ opacity: 0, translateY: 200 }}
-              animate={{ opacity: 1, translateY: 0 }}
-              exit={{
-                opacity: 0,
-                translateY: 200,
-                transition: exitTransition,
-              }}
-              transition={initialTransition}
-              className={styles.expandedContainer}
-            >
-              <div className={styles.topBar}></div>
-
-              <button
-                className={styles.closeButton}
-                onClick={() => {
-                  setIsRightContainerOpen(false);
-                }}
-              >
-                X
-              </button>
-              <div className={styles.textContainer}>
-                <h1>Gloton</h1>
-                <p>
-                  Gloton represents the pinnacle of my project experiences,
-                  inspired by the innovative Glovo platform to deliver a
-                  state-of-the-art, fully functional website. This project
-                  showcases a user-friendly interface and a streamlined
-                  purchasing pathway, enhancing overall user engagement.
-                  Notably, it features a comprehensive dashboard for restaurant
-                  owners, offering them the flexibility to effortlessly modify,
-                  add, or remove products. The integration of Google Places API
-                  ensures precise location services, while Cloudinary
-                  integration facilitates convenient photo uploads through an
-                  intuitive drag-and-drop system. These advanced features
-                  collectively guarantee an exceptional user experience.
-                </p>
-
-                <h2>Technology Stack</h2>
-                <p>
-                  <b>React.JS:</b> Powers dynamic, responsive UIs with efficient
-                  rendering and state management, perfect for interactive
-                  applications.
-                </p>
-                <p>
-                  <b>Express.JS:</b> A Node.js framework enabling quick
-                  development of web and mobile apps with its minimalist
-                  approach and robust features.
-                </p>
-                <p>
-                  <b>JsonWebToken (JWT):</b> Secures information transfer with
-                  compact, URL-safe JSON objects, ideal for authentication and
-                  data exchange.
-                </p>
-                <p>
-                  <b>Jest:</b> Simplifies unit testing with a zero-configuration
-                  setup, known for its speed and snapshot testing capabilities.
-                </p>
-                <p>
-                  <b>Cypress:</b> Revolutionizes end-to-end testing with
-                  real-time execution and debugging, ensuring browser-based
-                  application integrity.
-                </p>
-                <aside className={styles.buttonContainer}>
-                  <button className={styles.bottomButton}>Website</button>
-                  <button className={styles.bottomButton}>Github</button>
-                </aside>
-              </div>
-            </motion.div>
+            <ExpandedProject
+              setIsRightContainerOpen={setIsRightContainerOpen}
+            />
           )}
         </AnimatePresence>
       </LayoutGroup>
