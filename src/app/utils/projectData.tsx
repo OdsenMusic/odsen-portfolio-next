@@ -96,7 +96,7 @@ export const taskerProject = {
 export const calculatorProject = {
   content: (
     <>
-      <h1>Calculator</h1>
+      <h1 style={{ fontSize: "3rem" }}>Calculator</h1>
       <p>
         {`This was my first React project, a classic. When designing a calculator, there's no need to reinvent the wheel regarding its functionality. Therefore, my primary focus was on ensuring that each operation worked flawlessly without any errors. Additionally, I dedicated considerable effort to refining the visual design, resulting in an exceptionally sleek and user-friendly interface. This calculator also features a history function, allowing users to review past calculations.`}
       </p>

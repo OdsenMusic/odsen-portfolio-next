@@ -65,6 +65,10 @@
     display: none;
   }
 
+  .mainContainer {
+    padding-top: 30px;
+  }
+
   .expandedContainer {
     margin-right: 0;
     margin-top: 0;
