@@ -81,8 +81,6 @@
   border-radius: 50px;
   object-fit: cover;
   filter: saturate(0);
-  transition: 0.3s;
-  /* transform: translateY(20px); */
 }
 
 .bottomContainer {
@@ -112,6 +110,7 @@
   right: 7.5%;
   top: 60.9%;
   justify-self: flex-end;
+  position: absolute;
 }
 
 .projectImg:hover {
