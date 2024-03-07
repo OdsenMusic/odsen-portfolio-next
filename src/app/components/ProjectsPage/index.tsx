@@ -37,7 +37,7 @@ export const ProjectsPage: FC = () => {
       transition={{ ease: "easeOut", duration: 3 }}
       className={styles.viewport}
     >
-      <LayoutGroup>
+      <AnimatePresence mode="popLayout">
         <motion.div
           layout="position"
           transition={{
@@ -95,14 +95,11 @@ export const ProjectsPage: FC = () => {
             express={false}
           />
         </motion.div>
-        <AnimatePresence mode="popLayout">
-          {isRightContainerOpen && (
-            <ExpandedProject
-              setIsRightContainerOpen={setIsRightContainerOpen}
-            />
-          )}
-        </AnimatePresence>
-      </LayoutGroup>
+
+        {isRightContainerOpen && (
+          <ExpandedProject setIsRightContainerOpen={setIsRightContainerOpen} />
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };

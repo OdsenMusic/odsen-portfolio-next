@@ -44,7 +44,7 @@ export const ExpandedProject: React.FC<ExpandedProjectProps> = ({
       <div className={styles.textContainer}>
         <h1>Gloton</h1>
         <p>
-          In this project, developed by myself and three other students, the
+          {`In this project, developed by myself and three other students, the
           goal was to create a website similar to Glovo in both functionality
           and appearance. My primary role involved a significant contribution to
           the development of the application's front-end. This included
@@ -55,27 +55,27 @@ export const ExpandedProject: React.FC<ExpandedProjectProps> = ({
           leverage all the capabilities CSS offers, in addition to creating a
           unique and fully customizable interface. The final product was deemed
           by my professor, Jose Manuel, as the most beautiful Glovo application
-          in the history of the school.
+          in the history of the school.`}
         </p>
 
         <h2>Features</h2>
 
         <p>
-          The application features two main functionalities: purchasing products
+          {`The application features two main functionalities: purchasing products
           and creating and managing your restaurant. When purchasing products,
           customers can search for restaurants using the search bar on the hero
           page. Here, they have two options: use their location by clicking the
           "use location" button or enter their address manually. Both options
           utilize the Google Places API along with the usePlacesAutocomplete
           library, which greatly aided in customizing the styles and achieving a
-          professional finish.
+          professional finish. `}
           <br />
-          When it comes to managing a restaurant, the decision was made to
+          {`When it comes to managing a restaurant, the decision was made to
           create a dashboard. Within it, various aspects of the business can be
           modified, including deals, delivery charges, and product additions.
           The dashboard incorporates the Cloudinary API, allowing users to
           upload their images using a drag-and-drop system to maximize user
-          experience.
+          experience.`}
         </p>
 
         <h2>Technology Stack</h2>
@@ -111,3 +111,5 @@ export const ExpandedProject: React.FC<ExpandedProjectProps> = ({
     </motion.div>
   );
 };
+
+export default ExpandedProject;
