@@ -56,8 +56,6 @@ export const ProjectsPage: FC = () => {
             description={`Biggest project so far. Based off of the Glovo website, its a fully
           functional website with login and able to make purchases.`}
             name={`Gloton`}
-            stack={`          HTML, CSS, JavaScript, React, ExpressJS, MongoDB, JWT, Jest, Cypress
-          `}
             href={"https://gloton.netlify.app/"}
             isRightContainerOpen={isRightContainerOpen}
             setIsRightContainerOpen={setIsRightContainerOpen}
@@ -72,8 +70,6 @@ export const ProjectsPage: FC = () => {
             img={taskerImg.src}
             description={`Note and reminder taking app. Featured with backend, groups, color personalizing and trash bin`}
             name={`Tasker`}
-            stack={`          HTML, CSS, JavaScript, React, ExpressJS.
-          `}
             href={""}
             isRightContainerOpen={isRightContainerOpen}
             setIsRightContainerOpen={setIsRightContainerOpen}
@@ -88,8 +84,6 @@ export const ProjectsPage: FC = () => {
             img={calculatorImg.src}
             description={`My first react project. Basic calculator with an excellent design and history.`}
             name={`Calculator`}
-            stack={`HTML, CSS, JavaScript, React.
-            `}
             href="https://odsencalculator.netlify.app/"
             isRightContainerOpen={isRightContainerOpen}
             setIsRightContainerOpen={setIsRightContainerOpen}
