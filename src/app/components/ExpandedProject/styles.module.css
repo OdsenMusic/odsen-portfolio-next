@@ -8,10 +8,8 @@
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  font-family: "Montserrat";
   font-size: 1.7rem;
   font-weight: 200;
-
   background-color: #4f657f79;
   transition: 0.3s;
   cursor: pointer;
@@ -90,7 +88,6 @@
 
 .bottomButton {
   padding: 10px 40px;
-  font-family: "Montserrat";
   font-size: 1.3rem;
   font-weight: 300;
   transition: 0.2s;
@@ -105,6 +102,38 @@
   border: 1px solid white;
   transform: scale(1);
   cursor: pointer;
+}
+
+.technologiesContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.singleTechnology {
+  background-color: #104688af;
+  padding: 10px;
+  display: flex;
+  border-radius: 10px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.technologyText {
+  color: white;
+  text-align: center;
+}
+
+.technologyTitle {
+  font-weight: 400;
+  border-radius: 50px;
+  width: 90%;
+  text-align: center;
+
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 @media only screen and (max-width: 900px) {

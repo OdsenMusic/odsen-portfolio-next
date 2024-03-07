@@ -1,3 +1,12 @@
+import styles from "../components/ExpandedProject/styles.module.css";
+import htmlIcon from "../../../public/static/icons/html.svg";
+import javascriptIcon from "../../../public/static/icons/javascript.svg";
+import mongodbIcon from "../../../public/static/icons/mongodb.svg";
+import reactIcon from "../../../public/static/icons/react.svg";
+import expressIcon from "../../../public/static/icons/express.svg";
+import cssIcon from "../../../public/static/icons/css.svg";
+import Image from "next/image";
+
 export const glotonProject = {
   content: (
     <>
@@ -38,26 +47,62 @@ export const glotonProject = {
       </p>
 
       <h2>Technology Stack</h2>
-      <p>
-        <b>React.JS:</b> Powers dynamic, responsive UIs with efficient rendering
-        and state management, perfect for interactive applications.
-      </p>
-      <p>
-        <b>Express.JS:</b> A Node.js framework enabling quick development of web
-        and mobile apps with its minimalist approach and robust features.
-      </p>
-      <p>
-        <b>JsonWebToken (JWT):</b> Secures information transfer with compact,
-        URL-safe JSON objects, ideal for authentication and data exchange.
-      </p>
-      <p>
-        <b>Jest:</b> Simplifies unit testing with a zero-configuration setup,
-        known for its speed and snapshot testing capabilities.
-      </p>
-      <p>
-        <b>Cypress:</b> Revolutionizes end-to-end testing with real-time
-        execution and debugging, ensuring browser-based application integrity.
-      </p>
+      <div className={styles.technologiesContainer}>
+        <div className={styles.singleTechnology}>
+          <p className={styles.technologyText}>
+            <div className={styles.technologyTitle}>
+              <Image
+                height={25}
+                width={25}
+                className={styles.technologyIcon}
+                src={reactIcon.src}
+                alt=""
+              />
+              React.JS{" "}
+            </div>
+            <br /> Powers dynamic, responsive UIs with efficient rendering and
+            state management, perfect for interactive applications.
+          </p>
+        </div>
+        <div className={styles.singleTechnology}>
+          <p className={styles.technologyText}>
+            <div className={styles.technologyTitle}>
+              {" "}
+              <Image
+                height={20}
+                width={20}
+                className={styles.technologyIcon}
+                src={expressIcon.src}
+                alt=""
+              />{" "}
+              Express.JS
+            </div>{" "}
+            <br /> A Node.js framework enabling quick development of web and
+            mobile apps with its minimalist approach and robust features.
+          </p>
+        </div>
+        <div className={styles.singleTechnology}>
+          <p className={styles.technologyText}>
+            <div className={styles.technologyTitle}>JsonWebToken</div> <br />{" "}
+            Secures information transfer with compact, URL-safe JSON objects,
+            ideal for authentication and data exchange.
+          </p>
+        </div>
+        <div className={styles.singleTechnology}>
+          <p className={styles.technologyText}>
+            <div className={styles.technologyTitle}>Jest</div> <br /> Simplifies
+            unit testing with a zero-configuration setup, known for its speed
+            and snapshot testing capabilities.
+          </p>
+        </div>
+        <div className={styles.singleTechnology}>
+          <p className={styles.technologyText}>
+            <div className={styles.technologyTitle}>Cypress</div> <br />{" "}
+            Revolutionizes end-to-end testing with real-time execution and
+            debugging, ensuring browser-based application integrity.
+          </p>
+        </div>
+      </div>
     </>
   ),
   github: "https://github.com/nds-fsd/glovo",

@@ -168,6 +168,7 @@ p {
 }
 
 button {
+  font-family: inherit;
   outline: none;
   background-color: white;
   border: none;

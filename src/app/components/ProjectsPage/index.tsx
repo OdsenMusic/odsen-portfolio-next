@@ -20,7 +20,7 @@ import taskerImg from "../../../../public/static/images/taskerImg.jpg";
 import { ExpandedProject } from "../ExpandedProject";
 
 export const ProjectsPage: FC = () => {
-  const [isRightContainerOpen, setIsRightContainerOpen] = useState(false);
+  const [isRightContainerOpen, setIsRightContainerOpen] = useState(true);
   const [visibleProject, setVisibleProject] = useState(glotonProject);
 
   return (
