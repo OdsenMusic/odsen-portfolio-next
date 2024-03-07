@@ -42,12 +42,12 @@ export const ExpandedProject: React.FC<ExpandedProjectProps> = ({
       >
         <img className={styles.crossIcon} src={crossIcon.src} alt="" />
       </button>
-      <div className={styles.textContainer}>{project}</div>
+      <div className={styles.textContainer}>{project.content}</div>
       <aside className={styles.buttonContainer}>
-        <a href="https://gloton.netlify.app">
+        <a href={project.website}>
           <button className={styles.bottomButton}>Website</button>
         </a>
-        <a href="https://github.com/nds-fsd/glovo">
+        <a href={project.github}>
           <button className={styles.bottomButton}>Github</button>
         </a>
       </aside>
