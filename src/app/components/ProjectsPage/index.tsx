@@ -23,18 +23,6 @@ export const ProjectsPage: FC = () => {
   const [isRightContainerOpen, setIsRightContainerOpen] = useState(false);
   const [visibleProject, setVisibleProject] = useState(glotonProject);
 
-  const initialTransition = {
-    ease: "easeOut",
-    duration: 0.6,
-    delay: 0.4,
-  };
-
-  const exitTransition = {
-    ease: "easeOut",
-    duration: 0.1,
-    delay: 0,
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}

@@ -179,13 +179,6 @@
   }
 
   .openMore {
-    top: 60%;
-    right: -16px;
-    z-index: 2;
-    background-color: #9ba1a9;
-    padding: 3px;
-    margin: 0;
-    height: fit-content;
-    width: fit-content;
+    display: none;
   }
 }
