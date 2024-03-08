@@ -25,6 +25,21 @@
   box-shadow: 0 0 20px 0 #ffffff;
 }
 
+.video {
+  height: fit-content;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+.descriptionVideo {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .crossIcon {
   height: 30px;
   width: 30px;
@@ -107,33 +122,54 @@
 .technologiesContainer {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .singleTechnology {
   background-color: #104688af;
-  padding: 10px;
+
   display: flex;
   border-radius: 10px;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  max-width: 220px;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s;
+  user-select: none;
+}
+
+.singleTechnology:hover {
+  background-color: #4f657f;
 }
 
 .technologyText {
   color: white;
   text-align: center;
+  padding: 0 10px 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .technologyTitle {
   font-weight: 400;
-  border-radius: 50px;
-  width: 90%;
+  width: 100%;
+  height: 20px;
   text-align: center;
-
-  padding: 3px;
+  padding-top: 15px;
+  padding-bottom: 10px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 10px;
+  background-color: rgba(255, 255, 255, 0.11);
+  align-self: flex-start;
+  position: absolute;
+  top: 0;
 }
 
 @media only screen and (max-width: 900px) {
@@ -141,13 +177,6 @@
     margin-right: 0;
     top: 20px;
     height: calc(100vh - 70px);
-  }
-
-  .buttonContainer {
-    width: 90%;
-    gap: 10px;
-    display: flex;
-    justify-content: space-between;
   }
 
   .textContainer {
@@ -159,7 +188,18 @@
     opacity: 1;
     right: 5%;
   }
+}
 
+@media only screen and (max-width: 568px) {
+  .singleTechnology {
+    max-width: 100%;
+  }
+  .buttonContainer {
+    width: 90%;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
   .bottomButton {
     padding: 10px 10px;
   }

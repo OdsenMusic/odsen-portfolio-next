@@ -5,26 +5,38 @@ import mongodbIcon from "../../../public/static/icons/mongodb.svg";
 import reactIcon from "../../../public/static/icons/react.svg";
 import expressIcon from "../../../public/static/icons/express.svg";
 import cssIcon from "../../../public/static/icons/css.svg";
+import jwtIcon from "../../../public/static/icons/jwt.svg";
+import jestIcon from "../../../public/static/icons/jest.svg";
+import cypressIcon from "../../../public/static/icons/cypress.svg";
 import Image from "next/image";
 
 export const glotonProject = {
   content: (
     <>
       <h1>Gloton</h1>
-      <p>
-        {`In this project, developed by myself and three other students, the
-      goal was to create a website similar to Glovo in both functionality
-      and appearance. My primary role involved a significant contribution to
-      the development of the application's front-end. This included
-      designing the interface, enhancing usability with JavaScript, and
-      styling using CSS modules, as well as constructing the back-end
-      portion of the ordering system. The choice to use CSS over libraries
-      such as AntDesign or Tailwind was driven by the desire to fully
-      leverage all the capabilities CSS offers, in addition to creating a
-      unique and fully customizable interface. The final product was deemed
-      by my professor, Jose Manuel, as the most beautiful Glovo application
-      in the history of the school.`}
-      </p>
+      <div className={styles.descriptionVideo}>
+        <p>
+          {`In this project, developed by myself and three other students, the
+        goal was to create a website similar to Glovo in both functionality
+        and appearance. My primary role involved a significant contribution to
+        the development of the application's front-end. This included
+        designing the interface, enhancing usability with JavaScript, and
+        styling using CSS modules, as well as constructing the back-end
+        portion of the ordering system. The choice to use CSS over libraries
+        such as AntDesign or Tailwind was driven by the desire to fully
+        leverage all the capabilities CSS offers, in addition to creating a
+        unique and fully customizable interface. The final product was deemed
+        by my professor, Jose Manuel, as the most beautiful Glovo application
+        in the history of the school.`}
+        </p>
+        <video
+          className={styles.video}
+          src={require("../../../public/static/video/glotonVideo.mp4")}
+          autoPlay
+          muted
+          loop
+        />
+      </div>
 
       <h2>Features</h2>
 
@@ -49,57 +61,107 @@ export const glotonProject = {
       <h2>Technology Stack</h2>
       <div className={styles.technologiesContainer}>
         <div className={styles.singleTechnology}>
+          <div className={styles.technologyTitle}>
+            <Image
+              height={25}
+              width={25}
+              className={styles.technologyIcon}
+              src={reactIcon.src}
+              alt=""
+            />
+            React.JS{" "}
+          </div>
           <p className={styles.technologyText}>
-            <div className={styles.technologyTitle}>
-              <Image
-                height={25}
-                width={25}
-                className={styles.technologyIcon}
-                src={reactIcon.src}
-                alt=""
-              />
-              React.JS{" "}
-            </div>
             <br /> Powers dynamic, responsive UIs with efficient rendering and
             state management, perfect for interactive applications.
           </p>
         </div>
         <div className={styles.singleTechnology}>
+          <div className={styles.technologyTitle}>
+            {" "}
+            <Image
+              height={20}
+              width={20}
+              className={styles.technologyIcon}
+              src={expressIcon.src}
+              alt=""
+            />{" "}
+            Express.JS
+          </div>{" "}
           <p className={styles.technologyText}>
-            <div className={styles.technologyTitle}>
-              {" "}
-              <Image
-                height={20}
-                width={20}
-                className={styles.technologyIcon}
-                src={expressIcon.src}
-                alt=""
-              />{" "}
-              Express.JS
-            </div>{" "}
             <br /> A Node.js framework enabling quick development of web and
             mobile apps with its minimalist approach and robust features.
           </p>
         </div>
         <div className={styles.singleTechnology}>
+          <div className={styles.technologyTitle}>
+            {" "}
+            <Image
+              height={20}
+              width={20}
+              className={styles.technologyIcon}
+              src={jwtIcon.src}
+              alt=""
+            />{" "}
+            JsonWebToken
+          </div>{" "}
           <p className={styles.technologyText}>
-            <div className={styles.technologyTitle}>JsonWebToken</div> <br />{" "}
-            Secures information transfer with compact, URL-safe JSON objects,
-            ideal for authentication and data exchange.
+            <br /> Secures information transfer with compact, URL-safe JSON
+            objects, ideal for authentication and data exchange.
           </p>
         </div>
         <div className={styles.singleTechnology}>
+          <div className={styles.technologyTitle}>
+            {" "}
+            <Image
+              height={20}
+              width={20}
+              className={styles.technologyIcon}
+              style={{ padding: "-20px" }}
+              src={jestIcon.src}
+              alt=""
+            />
+            Jest
+          </div>{" "}
           <p className={styles.technologyText}>
-            <div className={styles.technologyTitle}>Jest</div> <br /> Simplifies
-            unit testing with a zero-configuration setup, known for its speed
-            and snapshot testing capabilities.
+            <br /> Simplifies unit testing with a zero-configuration setup,
+            known for its speed and snapshot testing capabilities.
           </p>
         </div>
         <div className={styles.singleTechnology}>
+          <div className={styles.technologyTitle}>
+            {" "}
+            <Image
+              height={20}
+              width={20}
+              className={styles.technologyIcon}
+              src={cypressIcon.src}
+              alt=""
+            />
+            Cypress
+          </div>{" "}
           <p className={styles.technologyText}>
-            <div className={styles.technologyTitle}>Cypress</div> <br />{" "}
-            Revolutionizes end-to-end testing with real-time execution and
-            debugging, ensuring browser-based application integrity.
+            <br /> Revolutionizes end-to-end testing with real-time execution
+            and debugging, ensuring browser-based application integrity.
+          </p>
+        </div>
+
+        <div className={styles.singleTechnology}>
+          <div className={styles.technologyTitle}>
+            {" "}
+            <Image
+              height={20}
+              width={20}
+              className={styles.technologyIcon}
+              src={cssIcon.src}
+              alt=""
+            />
+            CSS
+          </div>{" "}
+          <p className={styles.technologyText}>
+            <br /> CSS enhances the visual appearance and user experience. It
+            allows for flexible presentation across different browsers and
+            devices.
           </p>
         </div>
       </div>
