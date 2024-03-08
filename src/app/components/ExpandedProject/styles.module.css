@@ -81,6 +81,7 @@
   border-radius: 50px 50px 0 0;
   backdrop-filter: blur(13px);
   padding-bottom: 0px;
+  min-height: 865px;
 }
 
 .textContainer::-webkit-scrollbar {
