@@ -198,6 +198,12 @@
   .singleTechnology {
     max-width: 100%;
   }
+
+  .closeButton {
+    opacity: 1;
+    margin-right: 10px;
+  }
+
   .buttonContainer {
     width: 77%;
     gap: 10px;
