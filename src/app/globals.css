@@ -165,6 +165,7 @@ p {
   font-size: 1.1rem;
   color: #242424;
   font-weight: 200;
+  text-align: pretty;
 }
 
 button {

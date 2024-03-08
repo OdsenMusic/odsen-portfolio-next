@@ -13,21 +13,13 @@ import Image from "next/image";
 export const glotonProject = {
   content: (
     <>
-      <h1>Gloton</h1>
+      <h1 style={{ textAlign: "center", marginBottom: "10px" }}>Gloton</h1>
       <div className={styles.descriptionVideo}>
-        <p>
+        <p className={styles.sideText}>
           {`In this project, developed by myself and three other students, the
         goal was to create a website similar to Glovo in both functionality
         and appearance. My primary role involved a significant contribution to
-        the development of the application's front-end. This included
-        designing the interface, enhancing usability with JavaScript, and
-        styling using CSS modules, as well as constructing the back-end
-        portion of the ordering system. The choice to use CSS over libraries
-        such as AntDesign or Tailwind was driven by the desire to fully
-        leverage all the capabilities CSS offers, in addition to creating a
-        unique and fully customizable interface. The final product was deemed
-        by my professor, Jose Manuel, as the most beautiful Glovo application
-        in the history of the school.`}
+        the development of the application's front-end.`}
         </p>
         <video
           className={styles.video}
@@ -38,7 +30,9 @@ export const glotonProject = {
         />
       </div>
 
-      <h2>Features</h2>
+      <h2 style={{ padding: "5px 0", borderBottom: "1px solid black" }}>
+        Features
+      </h2>
 
       <p>
         {`The application features two main functionalities: purchasing products
@@ -58,7 +52,9 @@ export const glotonProject = {
       experience.`}
       </p>
 
-      <h2>Technology Stack</h2>
+      <h2 style={{ padding: "5px 0", borderBottom: "1px solid black" }}>
+        Technology Stack
+      </h2>
       <div className={styles.technologiesContainer}>
         <div className={styles.singleTechnology}>
           <div className={styles.technologyTitle}>
