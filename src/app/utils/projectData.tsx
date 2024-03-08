@@ -96,7 +96,7 @@ export const taskerProject = {
     </>
   ),
   github: "https://github.com/nds-fsd/reto-6-todo-app-OdsenMusic",
-  website: "https://gloton.netlify.app/",
+  website: "https://odsen.vercel.app/projects/",
 };
 
 export const calculatorProject = {
@@ -129,5 +129,5 @@ export const calculatorProject = {
     </>
   ),
   github: "https://github.com/nds-fsd/reto-4-react-calculator-OdsenMusic",
-  website: "https://odsencalculator.netlify.app/",
+  website: "https://odsencalculator.vercel.app/",
 };
