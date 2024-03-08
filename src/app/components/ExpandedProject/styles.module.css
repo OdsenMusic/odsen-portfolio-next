@@ -30,12 +30,9 @@
   height: fit-content;
   width: 50%;
   border-radius: 10px;
-  filter: grayscale(1) brightness(0.8);
-  transition: filter 0.3s;
-}
 
-.video:hover {
-  filter: grayscale(0) brightness(1);
+  transition: filter 0.3s;
+  border: 1px solid white;
 }
 
 .descriptionVideo {
