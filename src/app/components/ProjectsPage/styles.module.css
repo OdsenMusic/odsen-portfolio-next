@@ -48,6 +48,33 @@
   bottom: 0;
 }
 
+.ghostContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+  position: relative;
+  /* top: 25px; */
+  width: 85%;
+  max-width: 900px;
+  height: fit-content;
+  min-height: calc(100vh - 90px);
+  padding: 20px;
+  flex-direction: column;
+
+  border-radius: 50px 50px 0 0;
+
+  bottom: 0;
+  width: 300px;
+  margin-left: 30px;
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: 0.3s;
+  z-index: -3;
+}
+
 .mainContainer.closed {
   width: 300px;
   margin-left: 30px;

@@ -94,10 +94,13 @@ export const ProjectsPage: FC = () => {
       </button>
 
       {isRightContainerOpen && (
-        <ExpandedProject
-          project={visibleProject}
-          setIsRightContainerOpen={setIsRightContainerOpen}
-        />
+        <>
+          <div className={styles.ghostContainer}></div>
+          <ExpandedProject
+            project={visibleProject}
+            setIsRightContainerOpen={setIsRightContainerOpen}
+          />
+        </>
       )}
     </motion.div>
   );
