@@ -24,78 +24,81 @@ export const ProjectsPage: FC = () => {
       transition={{ ease: "easeOut", duration: 3 }}
       className={styles.viewport}
     >
-      <AnimatePresence mode="popLayout">
-        <motion.div
-          layout="position"
-          transition={{
-            duration: 0.5,
-            ease: [0.65, 0.05, 0.36, 1],
-          }}
-          initial={{ opacity: 0, translateY: 200 }}
-          animate={{ opacity: 1, translateY: 0 }}
-          className={`${styles.mainContainer} ${
-            isRightContainerOpen && styles.closed
-          }`}
-        >
-          {" "}
-          <ProjectCard
-            img={glotonImg.src}
-            description={`Biggest project so far. Based off of the Glovo website, its a fully
+      <motion.div
+        transition={{
+          duration: 0.5,
+          ease: [0.65, 0.05, 0.36, 1],
+        }}
+        initial={{ opacity: 0, translateY: 200 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        className={`${styles.mainContainer} ${
+          isRightContainerOpen && styles.closed
+        }`}
+      >
+        {" "}
+        <ProjectCard
+          img={glotonImg.src}
+          description={`Biggest project so far. Based off of the Glovo website, its a fully
           functional website with login and able to make purchases.`}
-            name={`Gloton`}
-            href={"https://gloton.netlify.app/"}
-            isRightContainerOpen={isRightContainerOpen}
-            setIsRightContainerOpen={setIsRightContainerOpen}
-            react={true}
-            javascript={true}
-            html={true}
-            mongodb={true}
-            css={true}
-            express={true}
-            setVisibleProject={setVisibleProject}
-            project={glotonProject}
-          />
-          <ProjectCard
-            img={taskerImg.src}
-            description={`Note and reminder taking app. Featured with backend, groups, color personalizing and trash bin`}
-            name={`Tasker`}
-            href={""}
-            isRightContainerOpen={isRightContainerOpen}
-            setIsRightContainerOpen={setIsRightContainerOpen}
-            react={true}
-            javascript={true}
-            html={true}
-            mongodb={false}
-            css={true}
-            express={true}
-            setVisibleProject={setVisibleProject}
-            project={taskerProject}
-          />
-          <ProjectCard
-            img={calculatorImg.src}
-            description={`My first react project. Basic calculator with an excellent design and history.`}
-            name={`Calculator`}
-            href="https://odsencalculator.netlify.app/"
-            isRightContainerOpen={isRightContainerOpen}
-            setIsRightContainerOpen={setIsRightContainerOpen}
-            react={true}
-            javascript={true}
-            html={true}
-            mongodb={false}
-            css={true}
-            express={false}
-            setVisibleProject={setVisibleProject}
-            project={calculatorProject}
-          />
-        </motion.div>
+          name={`Gloton`}
+          href={"https://gloton.netlify.app/"}
+          isRightContainerOpen={isRightContainerOpen}
+          setIsRightContainerOpen={setIsRightContainerOpen}
+          react={true}
+          javascript={true}
+          html={true}
+          mongodb={true}
+          css={true}
+          express={true}
+          setVisibleProject={setVisibleProject}
+          project={glotonProject}
+        />
+        <ProjectCard
+          img={taskerImg.src}
+          description={`Note and reminder taking app. Featured with backend, groups, color personalizing and trash bin`}
+          name={`Tasker`}
+          href={""}
+          isRightContainerOpen={isRightContainerOpen}
+          setIsRightContainerOpen={setIsRightContainerOpen}
+          react={true}
+          javascript={true}
+          html={true}
+          mongodb={false}
+          css={true}
+          express={true}
+          setVisibleProject={setVisibleProject}
+          project={taskerProject}
+        />
+        <ProjectCard
+          img={calculatorImg.src}
+          description={`My first react project. Basic calculator with an excellent design and history.`}
+          name={`Calculator`}
+          href="https://odsencalculator.netlify.app/"
+          isRightContainerOpen={isRightContainerOpen}
+          setIsRightContainerOpen={setIsRightContainerOpen}
+          react={true}
+          javascript={true}
+          html={true}
+          mongodb={false}
+          css={true}
+          express={false}
+          setVisibleProject={setVisibleProject}
+          project={calculatorProject}
+        />
+      </motion.div>
+      <button
+        onClick={() => setIsRightContainerOpen(!isRightContainerOpen)}
+        style={{ position: "absolute", left: "40px" }}
+      >
+        asdfasdfasdasdfasd
+      </button>
 
-        {isRightContainerOpen && (
-          <ExpandedProject
-            project={visibleProject}
-            setIsRightContainerOpen={setIsRightContainerOpen}
-          />
-        )}
-      </AnimatePresence>
+      {isRightContainerOpen && (
+        <ExpandedProject
+          project={visibleProject}
+          setIsRightContainerOpen={setIsRightContainerOpen}
+        />
+      )}
     </motion.div>
   );
 };

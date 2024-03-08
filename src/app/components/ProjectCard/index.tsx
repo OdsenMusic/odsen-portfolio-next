@@ -69,10 +69,17 @@ const ProjectCard: React.FC<CombinedProps> = ({
         </div>
       </div>
     </div>
-    {!isRightContainerOpen && (
-      <div className={styles.textContainer}>
-        <p>{description}</p>
-        <div className={styles.bottomContainer}>
+
+    <div
+      className={`${styles.textContainer} ${
+        isRightContainerOpen && styles.closed
+      }`}
+    >
+      {!isRightContainerOpen && (
+        <p className={styles.description}>{description}</p>
+      )}
+      <div className={styles.bottomContainer}>
+        {!isRightContainerOpen && (
           <TechnologyCard
             react={react}
             javascript={javascript}
@@ -81,9 +88,9 @@ const ProjectCard: React.FC<CombinedProps> = ({
             express={express}
             css={css}
           />
-        </div>
+        )}
       </div>
-    )}
+    </div>
   </motion.div>
 );
 

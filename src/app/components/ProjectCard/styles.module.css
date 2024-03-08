@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  width: fit-content;
+
   max-width: 90%;
   margin: 30px;
   background-color: #104688af;
@@ -13,11 +13,16 @@
   background-size: auto;
   border-radius: 50px;
   height: 200px;
+  transition: 0.3s;
+}
+
+.fullContainer.closed {
+  gap: 0;
 }
 
 .textContainer {
   font-weight: 200;
-  width: 50%;
+  width: 300px;
   padding: 30px;
   height: 100%;
   display: flex;
@@ -42,6 +47,14 @@
   border-radius: 0 50px 50px 50px;
   box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.152);
   overflow: hidden;
+}
+
+.textContainer.closed {
+  transition: 0.4s;
+  width: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
 }
 
 .mainContainer.closed {
@@ -84,7 +97,6 @@
 
   object-fit: cover;
   filter: saturate(0);
-  transition: 0.3s;
 }
 
 .projectImg:hover {

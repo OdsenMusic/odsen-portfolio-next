@@ -31,19 +31,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+
   gap: 20px;
-  position: relative;
-  top: 25px;
+  position: absolute;
+  /* top: 25px; */
   width: 85%;
   max-width: 900px;
   height: fit-content;
   min-height: calc(100vh - 90px);
   padding: 20px;
-
+  flex-direction: column;
   background-color: #ffffff76;
   border-radius: 50px 50px 0 0;
   backdrop-filter: blur(13px);
+  left: 25%;
+  bottom: 0;
 }
 
 .mainContainer.closed {
@@ -52,6 +54,8 @@
   padding-top: 25px;
   padding-left: 10px;
   padding-right: 10px;
+  transition: 0.3s;
+  left: 10%;
 }
 
 .showcaseImg {
