@@ -5,13 +5,7 @@ import {
   calculatorProject,
 } from "@/app/utils/projectData";
 import styles from "./styles.module.css";
-import {
-  motion,
-  AnimatePresence,
-  easeInOut,
-  easeOut,
-  LayoutGroup,
-} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard from "../ProjectCard";
 import React, { useState, FC } from "react";
 import glotonImg from "../../../../public/static/images/glotonImg.gif";
@@ -21,7 +15,7 @@ import { ExpandedProject } from "../ExpandedProject";
 
 export const ProjectsPage: FC = () => {
   const [isRightContainerOpen, setIsRightContainerOpen] = useState(true);
-  const [visibleProject, setVisibleProject] = useState(glotonProject);
+  const [visibleProject, setVisibleProject] = useState(taskerProject);
 
   return (
     <motion.div
