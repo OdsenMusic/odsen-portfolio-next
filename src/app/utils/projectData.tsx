@@ -32,7 +32,7 @@ export const glotonProject = {
         Features
       </h2>
 
-      <p style={{ columnCount: "2" }}>
+      <p className={styles.featuresText}>
         {`The application features two main functionalities: purchasing products
       and creating and managing your restaurant. When purchasing products,
       customers can search for restaurants using the search bar on the hero
@@ -81,7 +81,7 @@ export const taskerProject = {
         Features
       </h2>
 
-      <p style={{ columnCount: "2" }}>
+      <p className={styles.featuresText}>
         {`The application provides functionality for color customization, the allocation of tasks into groups, as well as the creation and deletion of these groups. Furthermore, it is supported by a robust backend system tasked with ensuring that names remain unique to prevent any conflicts. This careful management of names and groupings aids in maintaining a seamless and efficient user experience, avoiding potential discrepancies and ensuring the smooth operation of the app. The integration of these features reflects a thoughtful consideration of user needs, prioritizing both personalization and operational integrity.`}
       </p>
 

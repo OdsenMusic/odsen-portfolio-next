@@ -135,9 +135,12 @@
   justify-content: center;
 }
 
+.featuresText {
+  column-count: 2;
+}
+
 .singleTechnology {
   background-color: #104688af;
-
   display: flex;
   border-radius: 10px;
   flex-direction: column;
@@ -191,6 +194,10 @@
 @media only screen and (max-width: 568px) {
   .singleTechnology {
     max-width: 100%;
+  }
+
+  .featuresText {
+    column-count: 1;
   }
 
   .closeButton {
