@@ -13,20 +13,6 @@
   overflow: hidden;
 }
 
-.cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  border: 2px solid white;
-  border-radius: 100%;
-  background-color: #ffffffa9;
-  z-index: 99;
-  user-select: none;
-  pointer-events: none;
-}
-
 .mainContainer {
   display: flex;
   align-items: center;
@@ -43,7 +29,7 @@
   min-height: calc(100vh - 70px);
   padding: 20px;
 
-  background-color: #ffffff76;
+  background-color: #ffffff8e;
   border-radius: 50px 50px 0 0;
   backdrop-filter: blur(13px);
 }

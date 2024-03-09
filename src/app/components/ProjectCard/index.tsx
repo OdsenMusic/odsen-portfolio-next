@@ -13,7 +13,6 @@ const ProjectCard: React.FC<CombinedProps> = ({
   name,
   description,
   img,
-  href,
   isRightContainerOpen,
   setIsRightContainerOpen,
   react,
