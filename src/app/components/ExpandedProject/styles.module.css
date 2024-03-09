@@ -201,12 +201,14 @@
   }
 
   .buttonContainer {
-    width: 77%;
+    width: 84%;
     gap: 10px;
     display: flex;
     justify-content: space-between;
-    left: 8.8%;
-    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 20px;
   }
   .bottomButton {
     padding: 10px 10px;
@@ -221,13 +223,15 @@
   }
 
   .textContainer {
+    padding-top: 30px;
     padding: 20px;
     padding-bottom: 130px;
   }
 
   .expandedContainer {
     margin-right: 0;
-    margin: 0 15px;
+    margin: 0 10px;
+    margin-top: 15px;
     height: calc(100dvh - 10px);
   }
 }
