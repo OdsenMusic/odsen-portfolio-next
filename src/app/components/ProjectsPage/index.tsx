@@ -38,7 +38,7 @@ export const ProjectsPage: FC = () => {
           }`}
         >
           {" "}
-          {/* <ProjectCard
+          <ProjectCard
             img={glotonImg.src}
             description={`Biggest project so far. Based off of the Glovo website, its a fully
           functional website with login and able to make purchases.`}
@@ -86,7 +86,7 @@ export const ProjectsPage: FC = () => {
             express={false}
             setVisibleProject={setVisibleProject}
             project={calculatorProject}
-          /> */}
+          />
         </motion.div>
 
         {isRightContainerOpen && (
