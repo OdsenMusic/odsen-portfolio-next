@@ -32,8 +32,6 @@ export const ExpandedProject: React.FC<ExpandedProjectProps> = ({
       transition={initialTransition}
       className={styles.expandedContainer}
     >
-      <div className={styles.topBar}></div>
-
       <button
         className={styles.closeButton}
         onClick={() => {
