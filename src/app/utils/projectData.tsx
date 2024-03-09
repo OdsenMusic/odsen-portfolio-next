@@ -103,7 +103,7 @@ export const calculatorProject = {
       <h1 style={{ textAlign: "center", marginBottom: "10px" }}>Calculator</h1>
       <div className={styles.descriptionVideo}>
         <p className={styles.sideText}>
-          {`When designing a calculator, there's no need to reinvent the wheel. Therefore, my primary focus was on ensuring that each operation worked flawlessly as well as refining the visual design, resulting in a sleek and user-friendly interface. This calculator also features a history function, allowing users to review past calculations.`}
+          {`When designing this calculator my primary focus was on ensuring that each operation worked flawlessly as well as refining the visual design, resulting in a sleek and user-friendly interface. This calculator also features a history function, allowing users to review past calculations.`}
         </p>
         <video
           className={styles.video}
