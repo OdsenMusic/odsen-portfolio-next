@@ -32,7 +32,7 @@ export const glotonProject = {
         Features
       </h2>
 
-      <p>
+      <p style={{ columnCount: "2" }}>
         {`The application features two main functionalities: purchasing products
       and creating and managing your restaurant. When purchasing products,
       customers can search for restaurants using the search bar on the hero
@@ -40,9 +40,7 @@ export const glotonProject = {
       "use location" button or enter their address manually. Both options
       utilize the Google Places API along with the usePlacesAutocomplete
       library, which greatly aided in customizing the styles and achieving a
-      professional finish. `}
-        <br />
-        {`When it comes to managing a restaurant, the decision was made to
+      professional finish. When it comes to managing a restaurant, the decision was made to
       create a dashboard. Within it, various aspects of the business can be
       modified, including deals, delivery charges, and product additions.
       The dashboard incorporates the Cloudinary API, allowing users to
@@ -83,7 +81,7 @@ export const taskerProject = {
         Features
       </h2>
 
-      <p>
+      <p style={{ columnCount: "2" }}>
         {`The application provides functionality for color customization, the allocation of tasks into groups, as well as the creation and deletion of these groups. Furthermore, it is supported by a robust backend system tasked with ensuring that names remain unique to prevent any conflicts. This careful management of names and groupings aids in maintaining a seamless and efficient user experience, avoiding potential discrepancies and ensuring the smooth operation of the app. The integration of these features reflects a thoughtful consideration of user needs, prioritizing both personalization and operational integrity.`}
       </p>
 
@@ -102,11 +100,7 @@ export const taskerProject = {
 export const calculatorProject = {
   content: (
     <>
-      <h1
-        style={{ textAlign: "center", marginBottom: "10px", fontSize: "4rem" }}
-      >
-        Calculator
-      </h1>
+      <h1 style={{ textAlign: "center", marginBottom: "10px" }}>Calculator</h1>
       <div className={styles.descriptionVideo}>
         <p className={styles.sideText}>
           {`When designing a calculator, there's no need to reinvent the wheel. Therefore, my primary focus was on ensuring that each operation worked flawlessly as well as refining the visual design, resulting in a sleek and user-friendly interface. This calculator also features a history function, allowing users to review past calculations.`}
