@@ -9,15 +9,16 @@ export const ExpandedProject: React.FC<ExpandedProjectProps> = ({
   project,
 }) => {
   const initialTransition = {
-    ease: "easeOut",
-    duration: 0.6,
     delay: 0.4,
+    type: "spring",
+    stiffness: 80,
+    damping: 20,
   };
 
   const exitTransition = {
-    ease: "easeOut",
-    duration: 0.1,
-    delay: 0,
+    type: "spring",
+    stiffness: 80,
+    damping: 20,
   };
 
   return (

@@ -32,6 +32,7 @@
   background-color: #ffffff8e;
   border-radius: 50px 50px 0 0;
   backdrop-filter: blur(13px);
+  margin-top: 30px;
 }
 
 .mainContainer.closed {

@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import joelBackground from "../../../../public/static/images/joelBackgroud.png";
@@ -11,10 +14,20 @@ import cvIcon from "../../../../public/static/icons/cvIcon.svg";
 const AboutMePage = () => {
   return (
     <div className={styles.viewport}>
-      <div className={styles.mainContainer}>
+      <motion.div
+        initial={{ opacity: 0, translateY: 200 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{ type: "spring", stiffness: 80, damping: 20 }}
+        className={styles.mainContainer}
+      >
         <header className={styles.aboutHeader}>
           <aside className={styles.buttonContainer}>
-            <a href="">
+            <motion.a
+              whileTap={{ scale: 1 }}
+              whileHover={{ scale: 1.15 }}
+              transition={{ type: "spring", stiffness: 400, damping: 15 }}
+              href=""
+            >
               <button className={styles.bottomButton}>
                 <Image
                   src={githubIcon.src}
@@ -24,8 +37,13 @@ const AboutMePage = () => {
                   alt=""
                 />
               </button>
-            </a>
-            <a href="">
+            </motion.a>
+            <motion.a
+              whileTap={{ scale: 1 }}
+              whileHover={{ scale: 1.15 }}
+              transition={{ type: "spring", stiffness: 400, damping: 15 }}
+              href=""
+            >
               <button className={styles.bottomButton}>
                 <Image
                   src={linkedinIcon.src}
@@ -35,8 +53,13 @@ const AboutMePage = () => {
                   alt=""
                 />
               </button>
-            </a>
-            <a href="">
+            </motion.a>
+            <motion.a
+              whileTap={{ scale: 1 }}
+              whileHover={{ scale: 1.15 }}
+              transition={{ type: "spring", stiffness: 400, damping: 15 }}
+              href=""
+            >
               <button className={styles.bottomButton}>
                 <Image
                   src={spotifyIcon.src}
@@ -46,9 +69,14 @@ const AboutMePage = () => {
                   alt=""
                 />
               </button>
-            </a>
+            </motion.a>
 
-            <a href="">
+            <motion.a
+              whileTap={{ scale: 1 }}
+              whileHover={{ scale: 1.15 }}
+              transition={{ type: "spring", stiffness: 400, damping: 15 }}
+              href=""
+            >
               <button className={styles.bottomButton}>
                 <Image
                   src={mailIcon.src}
@@ -58,9 +86,14 @@ const AboutMePage = () => {
                   alt=""
                 />
               </button>
-            </a>
+            </motion.a>
 
-            <a href="">
+            <motion.a
+              whileTap={{ scale: 1 }}
+              whileHover={{ scale: 1.15 }}
+              transition={{ type: "spring", stiffness: 400, damping: 15 }}
+              href=""
+            >
               <button className={styles.bottomButton}>
                 <Image
                   src={cvIcon.src}
@@ -70,7 +103,7 @@ const AboutMePage = () => {
                   alt=""
                 />
               </button>
-            </a>
+            </motion.a>
           </aside>
           <h1 className={styles.joelName}>Joel Oliver Millán</h1>
           <Image
@@ -89,7 +122,7 @@ const AboutMePage = () => {
           </p>
           <h2>Experiencia</h2>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

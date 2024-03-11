@@ -28,8 +28,9 @@ export const ProjectsPage: FC = () => {
         <motion.div
           layout="position"
           transition={{
-            duration: 0.5,
-            ease: [0.65, 0.05, 0.36, 1],
+            type: "spring",
+            stiffness: 80,
+            damping: 20,
           }}
           initial={{ opacity: 0, translateY: 200 }}
           animate={{ opacity: 1, translateY: 0 }}

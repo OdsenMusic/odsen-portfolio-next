@@ -99,10 +99,6 @@
   transition: 0.5s;
 }
 
-.buttonContainer:hover {
-  scale: 1;
-}
-
 .bottomButton {
   padding: 5px;
   font-size: 1.3rem;
@@ -124,9 +120,5 @@
 }
 
 .bottomButton:hover {
-  color: white;
-
-  border: 1px solid white;
-  transform: scale(1.2);
   cursor: pointer;
 }
