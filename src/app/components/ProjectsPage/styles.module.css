@@ -28,7 +28,7 @@
   height: fit-content;
   min-height: calc(100vh - 70px);
   padding: 20px;
-
+  padding-top: 40px;
   background-color: #ffffff8e;
   border-radius: 50px 50px 0 0;
   backdrop-filter: blur(13px);
