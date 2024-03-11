@@ -34,6 +34,8 @@
   backdrop-filter: blur(13px);
   overflow: hidden;
   box-shadow: 0 0 50px 0 rgba(0, 20, 46, 0.479);
+
+  padding-bottom: 160px;
 }
 
 .aboutHeader {
@@ -47,6 +49,24 @@
   position: absolute;
   left: 30px;
   top: 200px;
+}
+
+.linkto {
+  display: inline-block;
+  color: white;
+  font-size: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3;
+}
+
+.linkto:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.linkto:visited {
+  color: white;
 }
 
 .joelBackgroundImg {
@@ -66,10 +86,11 @@
 }
 
 .textContainer {
-  margin-top: 50px;
-  padding: 30px;
+  padding: 0 30px;
   display: flex;
   flex-direction: column;
+
+  gap: 20px;
 }
 
 .svgLine {
@@ -90,13 +111,25 @@
   border-radius: 50px;
   box-shadow: 0 0 20px 0 rgba(46, 57, 89, 0.202);
   align-self: center;
-  position: fixed;
+
   left: 0;
   right: 0;
   margin: auto;
   background-color: rgb(234, 234, 234);
   scale: 0.9;
   transition: 0.5s;
+  position: fixed;
+  z-index: 1;
+}
+
+.mainTitle {
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .bottomButton {
@@ -121,4 +154,209 @@
 
 .bottomButton:hover {
   cursor: pointer;
+}
+
+.introContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 100px 100px 10px;
+  padding: 20px 10px;
+  width: calc(100% - 20px);
+  background-color: #49515b;
+  margin-top: 100px;
+}
+
+.otherJobs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.introText {
+  width: 80%;
+  text-align: pretty;
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.projectButton {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  font-size: 1rem;
+  color: black;
+  transition: 0.3s;
+}
+
+.projectButton:hover {
+  background-color: #c3deffaf;
+  cursor: pointer;
+}
+
+.experienceContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  height: fit-content;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+.cardContainer {
+  background-color: #104688af;
+  color: white;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 10px;
+}
+
+.languageCardContainerNormal {
+  background-color: #104688af;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.level {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: white;
+}
+
+.sideIcon {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.cardContainerNormal {
+  background-color: #4d4d379b;
+  color: white;
+  height: fit-content;
+  border-radius: 10px;
+  width: 32%;
+  height: 250px;
+}
+
+.experienceTitle {
+  background-color: rgba(255, 255, 255, 0.219);
+  border-radius: 10px 10px 0 0;
+
+  padding: 10px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  position: relative;
+}
+
+.language {
+  background-color: rgba(255, 255, 255, 0.219);
+  border-radius: 10px 10px 0 0;
+  width: calc(100% - 20px);
+  padding: 10px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.catalanFlag {
+  margin: 5px 0;
+}
+
+.experienceTextContainer {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.list {
+  background-color: rgba(255, 255, 255, 0.295);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.listItem {
+  font-size: 0.9rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.point {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.imageContainer {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.time {
+  color: white;
+}
+
+.job {
+  color: white;
+}
+
+.company {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.185);
+  padding: 7px 12px;
+  border-radius: 50px;
+  width: fit-content;
+  font-weight: 400;
+}
+
+.description {
+  color: white;
+}
+
+.appleMusicImage {
+  border-radius: 10px;
+
+  filter: grayscale(1) contrast(0.8) sepia(1) hue-rotate(174deg) brightness(1.1);
+  transition: filter 0.3s;
+}
+
+.appleMusicImage:hover {
+  filter: none;
 }

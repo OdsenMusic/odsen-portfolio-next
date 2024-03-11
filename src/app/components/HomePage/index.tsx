@@ -144,8 +144,10 @@ export const HomePage: FC = () => {
                   alt=""
                 />
               </a>
-              <a
-                href="https://www.linkedin.com/in/joel-oliver-millan/"
+              <div
+                onClick={() => {
+                  router.push("/aboutme");
+                }}
                 onMouseLeave={() => mouseOutHandler()}
                 onMouseEnter={() => {
                   mouseInHandler("LinkedIn");
@@ -159,7 +161,7 @@ export const HomePage: FC = () => {
                   src={linkedinLogo.src}
                   alt=""
                 />
-              </a>
+              </div>
               <a
                 href="mailto:jolivermillan@gmail.com"
                 onMouseLeave={() => mouseOutHandler()}
