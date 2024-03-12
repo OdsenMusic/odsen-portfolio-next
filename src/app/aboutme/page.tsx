@@ -1,8 +1,5 @@
-import React from "react";
 import AboutMePage from "../components/AboutMePage";
 
-export const AboutMe = () => {
+export default function AboutMe() {
   return <AboutMePage />;
-};
-
-export default AboutMe;
+}
