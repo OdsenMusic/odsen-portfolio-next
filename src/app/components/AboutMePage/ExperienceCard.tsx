@@ -28,57 +28,57 @@ const ExperienceCard = () => {
           stations around the world, and my song "Horizon" has been featured in
           the video game "Rocket League", where my logo can also be used as a
           flag in the game.`}
-          <ol className={styles.list}>
-            <li className={styles.listItem}>
-              {" "}
-              <div className={styles.point} />
-              {`"In My Bones" achieved a remarkable milestone with 2.5 million
+        </p>
+        <ol className={styles.list}>
+          <li className={styles.listItem}>
+            {" "}
+            <div className={styles.point} />
+            {`"In My Bones" achieved a remarkable milestone with 2.5 million
               plays and earned a spot on Apple Music's most prestigious playlist
               for its genre.`}
-            </li>
-            <li className={styles.listItem}>
-              {" "}
-              <div className={styles.point} />
-              {`My music has resonated with fans across the globe.`}
-            </li>
-            <li className={styles.listItem}>
-              {" "}
-              <div className={styles.point} />{" "}
-              <div>
-                {`I have worked hand by hand with artists like`}
-                <a
-                  className={styles.linkto}
-                  href="https://en.wikipedia.org/wiki/Christian_Burns"
-                >
-                  {" "}
-                  Christian Burns{" "}
-                </a>{" "}
-                and{" "}
-                <a
-                  className={styles.linkto}
-                  href="https://en.wikipedia.org/wiki/Richard_Bedford"
-                >
-                  Richard Bedford{" "}
-                </a>
-                .
-              </div>
-            </li>
-            <li className={styles.listItem}>
-              {" "}
-              <div className={styles.point} />
-              {`I have collaborated with the
+          </li>
+          <li className={styles.listItem}>
+            {" "}
+            <div className={styles.point} />
+            {`My music has resonated with fans across the globe.`}
+          </li>
+          <li className={styles.listItem}>
+            {" "}
+            <div className={styles.point} />{" "}
+            <div>
+              {`I have worked hand by hand with artists like`}
+              <a
+                className={styles.linkto}
+                href="https://en.wikipedia.org/wiki/Christian_Burns"
+              >
+                {" "}
+                Christian Burns{" "}
+              </a>{" "}
+              and{" "}
+              <a
+                className={styles.linkto}
+                href="https://en.wikipedia.org/wiki/Richard_Bedford"
+              >
+                Richard Bedford{" "}
+              </a>
+              .
+            </div>
+          </li>
+          <li className={styles.listItem}>
+            {" "}
+            <div className={styles.point} />
+            {`I have collaborated with the
               Australian company Zenhiser, focusing on sound design and field
               recordings.`}
-            </li>
+          </li>
 
-            <li className={styles.listItem}>
-              {" "}
-              <div className={styles.point} />
-              {`English served as the language of communication with companies,
+          <li className={styles.listItem}>
+            {" "}
+            <div className={styles.point} />
+            {`English served as the language of communication with companies,
               other producers and managers.`}
-            </li>
-          </ol>
-        </p>
+          </li>
+        </ol>
       </div>
     </div>
   );
