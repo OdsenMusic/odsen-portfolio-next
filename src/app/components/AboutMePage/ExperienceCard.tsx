@@ -28,29 +28,29 @@ const ExperienceCard = () => {
         </a>
 
         <p className={styles.description}>
-          As a music producer, Odsen, I've had the opportunity to work with the
+          {`          As a music producer, Odsen, I've had the opportunity to work with the
           renowned company Monstercat. My music has been played on radio
           stations around the world, and my song "Horizon" has been featured in
           the video game "Rocket League", where my logo can also be used as a
-          flag in the game.
+          flag in the game.`}
           <ol className={styles.list}>
             <li className={styles.listItem}>
               {" "}
               <div className={styles.point} />
-              "In My Bones" achieved a remarkable milestone with 2.5 million
+              {`              "In My Bones" achieved a remarkable milestone with 2.5 million
               plays and earned a spot on Apple Music's most prestigious playlist
-              for its genre.
+              for its genre.`}
             </li>
             <li className={styles.listItem}>
               {" "}
               <div className={styles.point} />
-              My music has resonated with fans across the globe.
+              {`         My music has resonated with fans across the globe.`}
             </li>
             <li className={styles.listItem}>
               {" "}
               <div className={styles.point} />{" "}
               <div>
-                I have worked hand by hand with artists like{" "}
+                {`      I have worked hand by hand with artists like`}
                 <a
                   className={styles.linkto}
                   href="https://en.wikipedia.org/wiki/Christian_Burns"
@@ -70,16 +70,17 @@ const ExperienceCard = () => {
             </li>
             <li className={styles.listItem}>
               {" "}
-              <div className={styles.point} />I have collaborated with the
+              <div className={styles.point} />
+              {`I have collaborated with the
               Australian company Zenhiser, focusing on sound design and field
-              recordings.
+              recordings.`}
             </li>
 
             <li className={styles.listItem}>
               {" "}
               <div className={styles.point} />
-              English served as the language of communication with companies,
-              other producers and managers.
+              {`       English served as the language of communication with companies,
+              other producers and managers.`}
             </li>
           </ol>
         </p>

@@ -144,9 +144,9 @@ const AboutMePage = () => {
         <div className={styles.textContainer}>
           <div className={styles.introContainer}>
             <p className={styles.introText}>
-              Hello! I'm Joel. It's a pleasure to meet you. I'm a passionate
+              {`             Hello! I'm Joel. It's a pleasure to meet you. I'm a passionate
               27-year-old Junior Full Stack Developer and a professional music
-              producer.
+              producer.`}
             </p>
           </div>
           <h2 className={styles.mainTitle}>
@@ -189,8 +189,8 @@ const AboutMePage = () => {
               <div className={styles.experienceTextContainer}>
                 <p className={styles.company}>Amazon</p>
                 <p className={styles.description}>
-                  This challenging job helped me save enough to finance my
-                  master's in web programming.
+                  {`                  This challenging job helped me save enough to finance my
+                  master's in web programming.`}
                 </p>
               </div>
             </div>
@@ -209,9 +209,9 @@ const AboutMePage = () => {
               <div className={styles.experienceTextContainer}>
                 <p className={styles.company}>Roler</p>
                 <p className={styles.description}>
-                  In this role, my responsibilities included managing incoming
+                  {`                  In this role, my responsibilities included managing incoming
                   trucks, preparing delivery notes, and ensuring all
-                  documentation was accurate.
+                  documentation was accurate.`}
                 </p>
               </div>
             </div>
@@ -230,8 +230,8 @@ const AboutMePage = () => {
               <div className={styles.experienceTextContainer}>
                 <p className={styles.company}>Ibericus</p>
                 <p className={styles.description}>
-                  My first job involved the primary task of slicing ham and
-                  packaging it for sale.
+                  {`               My first job involved the primary task of slicing ham and
+                  packaging it for sale.`}
                 </p>
               </div>
             </div>
@@ -253,9 +253,9 @@ const AboutMePage = () => {
               <div className={styles.experienceTextContainer}>
                 <p className={styles.company}>Nuclio Digital School</p>
                 <p className={styles.description}>
-                  This is the most enjoyable educational center I have ever
+                  {`             This is the most enjoyable educational center I have ever
                   attended. Thanks to my esteemed professors, I now possess
-                  extensive knowledge about the development world.
+                  extensive knowledge about the development world.`}
                 </p>
               </div>
             </div>
@@ -267,9 +267,9 @@ const AboutMePage = () => {
               <div className={styles.experienceTextContainer}>
                 <p className={styles.company}>UAB</p>
                 <p className={styles.description}>
-                  At university is where I learned math, physics, critical
+                  {`               At university is where I learned math, physics, critical
                   thinking, how to speak, and how to articulate my ideas
-                  properly.
+                  properly.`}
                 </p>
               </div>
             </div>
@@ -281,7 +281,7 @@ const AboutMePage = () => {
               <div className={styles.experienceTextContainer}>
                 <p className={styles.company}>INS Viladecavalls</p>
                 <p className={styles.description}>
-                  All my passion for science stems from this experience.
+                  {`              All my passion for science stems from this experience.`}
                 </p>
               </div>
             </div>
