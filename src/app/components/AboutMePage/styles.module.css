@@ -234,10 +234,170 @@ header:hover > .joelBackgroundImg {
   border-radius: 10px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .experienceContainer {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .appleMusicImage {
+    width: 100%;
+    height: fit-content;
+  }
+  .cardContainerNormal {
+    min-width: 49%;
+    min-height: fit-content;
+  }
+  .otherJobs {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .viewport {
+    background-repeat: repeat-y;
+  }
+}
+
+@media only screen and (max-width: 608px) {
+  .mainContainer {
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+  }
+
+  .joelBackgroundImg {
+    display: none;
+  }
+
+  .aboutHeader {
+    height: fit-content;
+    width: 100%;
+  }
+
+  .experienceContainer {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .textContainer {
+    width: 100%;
+  }
+
+  .appleMusicImage {
+    width: 100%;
+  }
+
+  .experienceTextContainer {
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .company {
+    align-self: flex-start;
+  }
+
+  .description {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cardContainer {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .otherJobs {
+    flex-direction: column;
+    width: 100%;
+  }
+  .cardContainerNormal {
+    min-width: 100%;
+    height: fit-content;
+  }
+
+  .introContainer {
+    width: 90%;
+  }
+
+  .introText {
+    width: 90%;
+  }
+
+  .languageCardContainerNormal {
+    width: 100%;
+    display: flex;
+  }
+
+  .buttonContainer {
+    width: 90%;
+    gap: 0;
+  }
+
+  .bottomButton {
+    width: 50px;
+    height: 50px;
+  }
+
+  .list {
+    width: 95%;
+    justify-self: center;
+    margin: 0;
+  }
+
+  .joelName {
+    font-size: 2.5rem;
+    max-width: 100%;
+    text-align: center;
+
+    margin: auto;
+    color: black;
+    position: inherit;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .introText {
+    text-align: center;
+    margin: 0;
+  }
+
+  .company {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+
+  .experienceTextContainer {
+    width: 95%;
+  }
+
+  .introContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .mainContainer {
+    padding-bottom: 110px;
+    margin-bottom: 0;
+  }
+}
+
 .cardContainer {
   background-color: #104688af;
   color: white;
-  height: 520px;
+  min-height: 520px;
   display: flex;
   flex-direction: column;
 
@@ -275,7 +435,7 @@ header:hover > .joelBackgroundImg {
   height: fit-content;
   border-radius: 10px;
   width: 32%;
-  height: 250px;
+  min-height: 250px;
 }
 
 .experienceTitle {
@@ -375,8 +535,4 @@ header:hover > .joelBackgroundImg {
 
   filter: grayscale(1) contrast(0.8) sepia(1) hue-rotate(174deg) brightness(1.1);
   transition: filter 0.3s;
-}
-
-.appleMusicImage:hover {
-  filter: none;
 }

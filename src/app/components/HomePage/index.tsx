@@ -155,9 +155,6 @@ export const HomePage: FC = () => {
                 className={styles.sideButton}
               >
                 <Image
-                  style={{
-                    backgroundColor: "#5781a7",
-                  }}
                   height={70}
                   width={70}
                   className={styles.icon}

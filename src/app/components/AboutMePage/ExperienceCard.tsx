@@ -20,12 +20,7 @@ const ExperienceCard = () => {
         />
       </h3>
       <div className={styles.experienceTextContainer}>
-        <a
-          style={{ textDecoration: "none", cursor: "pointer" }}
-          href="https://www.monstercat.com/"
-        >
-          <p className={styles.company}>Monstercat</p>
-        </a>
+        <p className={styles.company}>Monstercat</p>
 
         <p className={styles.description}>
           {`As a music producer, Odsen, I've had the opportunity to work with the

@@ -83,6 +83,7 @@
   height: 100%;
   filter: saturate(0);
   transition: 0.3s;
+  object-fit: cover;
 }
 
 .projectImg:hover {

@@ -13,7 +13,6 @@ import cvIcon from "../../../../public/static/icons/cvIcon.svg";
 import ExperienceCard from "./ExperienceCard";
 import appleMusicImage from "../../../../public/static/images/applemusic.png";
 import rocketLeagueImage from "../../../../public/static/images/rocket league.jpg";
-import monstercatLogo from "../../../../public/static/images/monstercat.svg";
 import englishFlag from "../../../../public/static/icons/uk.svg";
 import spanishFlag from "../../../../public/static/icons/spain.svg";
 import italianFlag from "../../../../public/static/icons/italy.svg";
@@ -25,7 +24,6 @@ import briefcaseIcon from "../../../../public/static/icons/briefcase.svg";
 import bookIcon from "../../../../public/static/icons/book.svg";
 import globeIcon from "../../../../public/static/icons/globe.svg";
 import codeIcon from "../../../../public/static/icons/code.svg";
-import TechnologyCard from "../TechnologyCard";
 import htmlIcon from "../../../../public/static/icons/html.svg";
 import javascriptIcon from "../../../../public/static/icons/javascript.svg";
 import mongodbIcon from "../../../../public/static/icons/mongodb.svg";
@@ -45,7 +43,7 @@ const AboutMePage = () => {
           whileTap={{ scale: 1 }}
           whileHover={{ scale: 1.15 }}
           transition={{ type: "spring", stiffness: 400, damping: 15 }}
-          href=""
+          href="https://github.com/OdsenMusic"
         >
           <button className={styles.bottomButton}>
             <Image
@@ -61,7 +59,7 @@ const AboutMePage = () => {
           whileTap={{ scale: 1 }}
           whileHover={{ scale: 1.15 }}
           transition={{ type: "spring", stiffness: 400, damping: 15 }}
-          href=""
+          href="https://www.linkedin.com/in/joel-oliver-millan/"
         >
           <button className={styles.bottomButton}>
             <Image
@@ -77,7 +75,7 @@ const AboutMePage = () => {
           whileTap={{ scale: 1 }}
           whileHover={{ scale: 1.15 }}
           transition={{ type: "spring", stiffness: 400, damping: 15 }}
-          href=""
+          href="https://open.spotify.com/intl-es/artist/5u9LEu640uGxBEKnU1PY9V"
         >
           <button className={styles.bottomButton}>
             <Image
@@ -94,7 +92,7 @@ const AboutMePage = () => {
           whileTap={{ scale: 1 }}
           whileHover={{ scale: 1.15 }}
           transition={{ type: "spring", stiffness: 400, damping: 15 }}
-          href=""
+          href="mailto:jolivermillan@gmail.com"
         >
           <button className={styles.bottomButton}>
             <Image
@@ -107,7 +105,7 @@ const AboutMePage = () => {
           </button>
         </motion.a>
 
-        <motion.a
+        {/* <motion.a
           whileTap={{ scale: 1 }}
           whileHover={{ scale: 1.15 }}
           transition={{ type: "spring", stiffness: 400, damping: 15 }}
@@ -118,11 +116,11 @@ const AboutMePage = () => {
               src={cvIcon.src}
               className={styles.buttonIcon}
               height={40}
-              width={40}
+              width={40}c:\Users\joliv\Downloads\user-circle.svg
               alt=""
             />
           </button>
-        </motion.a>
+        </motion.a> */}
       </aside>
       <motion.div
         initial={{ opacity: 0, translateY: 200 }}
