@@ -7,7 +7,7 @@ import styles from "./styles.module.css";
 import backgroundImg from "../../../../public/static/images/Sin título-1.jpg";
 import logoImg from "../../../../public/static/images/Logo.png";
 import spotifyLogo from "../../../../public/static/images/Spotify_logo_without_text.svg";
-import linkedinLogo from "../../../../public/static/images/LinkedIn_icon_circle.svg";
+import linkedinLogo from "../../../../public/static/icons/user.svg";
 import MailIcon from "../../../../public/static/images/mailicon.svg";
 import { motion } from "framer-motion";
 
@@ -150,11 +150,14 @@ export const HomePage: FC = () => {
                 }}
                 onMouseLeave={() => mouseOutHandler()}
                 onMouseEnter={() => {
-                  mouseInHandler("LinkedIn");
+                  mouseInHandler("About me");
                 }}
                 className={styles.sideButton}
               >
                 <Image
+                  style={{
+                    backgroundColor: "#5781a7",
+                  }}
                   height={70}
                   width={70}
                   className={styles.icon}

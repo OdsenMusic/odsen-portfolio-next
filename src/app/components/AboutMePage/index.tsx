@@ -10,7 +10,7 @@ import linkedinIcon from "../../../../public/static/icons/linkedinIcon.svg";
 import spotifyIcon from "../../../../public/static/icons/spotifyIcon.svg";
 import mailIcon from "../../../../public/static/icons/mailIcon.svg";
 import cvIcon from "../../../../public/static/icons/cvIcon.svg";
-import ExperienceCard from "./ExperienceCard.tsx";
+import ExperienceCard from "./ExperienceCard";
 import appleMusicImage from "../../../../public/static/images/applemusic.png";
 import rocketLeagueImage from "../../../../public/static/images/rocket league.jpg";
 import monstercatLogo from "../../../../public/static/images/monstercat.svg";
@@ -24,6 +24,18 @@ import hamIcon from "../../../../public/static/icons/meat.svg";
 import briefcaseIcon from "../../../../public/static/icons/briefcase.svg";
 import bookIcon from "../../../../public/static/icons/book.svg";
 import globeIcon from "../../../../public/static/icons/globe.svg";
+import codeIcon from "../../../../public/static/icons/code.svg";
+import TechnologyCard from "../TechnologyCard";
+import htmlIcon from "../../../../public/static/icons/html.svg";
+import javascriptIcon from "../../../../public/static/icons/javascript.svg";
+import mongodbIcon from "../../../../public/static/icons/mongodb.svg";
+import reactIcon from "../../../../public/static/icons/react.svg";
+import expressIcon from "../../../../public/static/icons/express.svg";
+import cssIcon from "../../../../public/static/icons/css.svg";
+import gitIcon from "../../../../public/static/icons/git.svg";
+import typescriptIcon from "../../../../public/static/icons/typescript.svg";
+import nextIcon from "../../../../public/static/icons/next-js.svg";
+import pythonIcon from "../../../../public/static/icons/python.svg";
 
 const AboutMePage = () => {
   return (
@@ -121,8 +133,8 @@ const AboutMePage = () => {
         <header className={styles.aboutHeader}>
           <h1 className={styles.joelName}>Joel Oliver Millán</h1>
           <Image
-            height={700}
-            width={1000}
+            height={200}
+            width={700}
             src={joelBackground.src}
             alt="Joel Oliver in the background"
             className={styles.joelBackgroundImg}
@@ -136,7 +148,6 @@ const AboutMePage = () => {
               27-year-old Junior Full Stack Developer and a professional music
               producer.
             </p>
-            <button className={styles.projectButton}>Projects</button>
           </div>
           <h2 className={styles.mainTitle}>
             <Image src={briefcaseIcon.src} height={25} width={25} alt="" /> Work
@@ -178,8 +189,8 @@ const AboutMePage = () => {
               <div className={styles.experienceTextContainer}>
                 <p className={styles.company}>Amazon</p>
                 <p className={styles.description}>
-                  This job, although it was tough helped me save up to pay for
-                  my master's in web programming.
+                  This challenging job helped me save enough to finance my
+                  master's in web programming.
                 </p>
               </div>
             </div>
@@ -193,14 +204,14 @@ const AboutMePage = () => {
                   width={30}
                   alt=""
                 />
-                <p className={styles.time}>May 2022 - Oct 2023</p>
+                <p className={styles.time}>Oct 2019 - Sep 2020</p>
               </h3>
               <div className={styles.experienceTextContainer}>
                 <p className={styles.company}>Roler</p>
                 <p className={styles.description}>
-                  My role on this ocupation was to administrate incoming trucks,
-                  make albaranes as well as make sure all the papers were
-                  correct.
+                  In this role, my responsibilities included managing incoming
+                  trucks, preparing delivery notes, and ensuring all
+                  documentation was accurate.
                 </p>
               </div>
             </div>
@@ -214,13 +225,13 @@ const AboutMePage = () => {
                   width={40}
                   alt=""
                 />
-                <p className={styles.time}>May 2022 - Oct 2023</p>
+                <p className={styles.time}>Sep 2018 - Oct 2019</p>
               </h3>
               <div className={styles.experienceTextContainer}>
                 <p className={styles.company}>Ibericus</p>
                 <p className={styles.description}>
-                  My first job. The main task I had to complete was slicing ham
-                  and envasarlo para vender.
+                  My first job involved the primary task of slicing ham and
+                  packaging it for sale.
                 </p>
               </div>
             </div>
@@ -237,27 +248,27 @@ const AboutMePage = () => {
             <div className={styles.cardContainerNormal}>
               <h3 className={styles.experienceTitle}>
                 Master in Full Stack Development
-                <p className={styles.time}>May 2022 - Oct 2023</p>
+                <p className={styles.time}>Oct 2023 - Mar 2024</p>
               </h3>
               <div className={styles.experienceTextContainer}>
                 <p className={styles.company}>Nuclio Digital School</p>
                 <p className={styles.description}>
-                  This is the most enjoyable education center I have ever been.
-                  Thanks to my dear professors I now have broad knowlege about
-                  the development world.
+                  This is the most enjoyable educational center I have ever
+                  attended. Thanks to my esteemed professors, I now possess
+                  extensive knowledge about the development world.
                 </p>
               </div>
             </div>
             <div className={styles.cardContainerNormal}>
               <h3 className={styles.experienceTitle}>
                 Degree in Food Science and Technology
-                <p className={styles.time}>May 2022 - Oct 2023</p>
+                <p className={styles.time}>Sep 2016 - Jun 2020</p>
               </h3>
               <div className={styles.experienceTextContainer}>
                 <p className={styles.company}>UAB</p>
                 <p className={styles.description}>
-                  I spent three years in the university. Here is where I learnt
-                  critical thinking, how to speak and how to articulate
+                  At university is where I learned math, physics, critical
+                  thinking, how to speak, and how to articulate my ideas
                   properly.
                 </p>
               </div>
@@ -265,18 +276,86 @@ const AboutMePage = () => {
             <div className={styles.cardContainerNormal}>
               <h3 className={styles.experienceTitle}>
                 Scientific Bachelor's Degree
-                <p className={styles.time}>May 2022 - Oct 2023</p>
+                <p className={styles.time}>May 2014 - Jun 2016</p>
               </h3>
               <div className={styles.experienceTextContainer}>
                 <p className={styles.company}>INS Viladecavalls</p>
                 <p className={styles.description}>
-                  All my love from science comes from here.
+                  All my passion for science stems from this experience.
                 </p>
               </div>
             </div>
           </div>
         </div>
-
+        <div className={styles.textContainer}>
+          <h2 className={styles.mainTitle}>
+            {" "}
+            <Image src={codeIcon.src} height={30} width={30} alt="" />
+            Technologies
+          </h2>
+          <div className={styles.technologiesContainer}>
+            <div className={styles.singleTechnology}>
+              {" "}
+              <Image
+                src={javascriptIcon.src}
+                height={50}
+                width={50}
+                alt=""
+              />{" "}
+              <p>JavaScript</p>
+            </div>
+            <div className={styles.singleTechnology}>
+              {" "}
+              <Image
+                src={typescriptIcon.src}
+                height={50}
+                width={50}
+                alt=""
+              />{" "}
+              <p>TypeScript</p>
+            </div>
+            <div className={styles.singleTechnology}>
+              {" "}
+              <Image src={pythonIcon.src} height={50} width={50} alt="" />{" "}
+              <p>Python</p>
+            </div>
+            <div className={styles.singleTechnology}>
+              {" "}
+              <Image src={cssIcon.src} height={50} width={50} alt="" />{" "}
+              <p>CSS</p>
+            </div>
+            <div className={styles.singleTechnology}>
+              {" "}
+              <Image src={htmlIcon.src} height={50} width={50} alt="" />{" "}
+              <p>HTML</p>
+            </div>
+            <div className={styles.singleTechnology}>
+              {" "}
+              <Image src={reactIcon.src} height={50} width={50} alt="" />{" "}
+              <p>React.JS</p>
+            </div>
+            <div className={styles.singleTechnology}>
+              {" "}
+              <Image src={nextIcon.src} height={50} width={50} alt="" />{" "}
+              <p>Next.JS</p>
+            </div>
+            <div className={styles.singleTechnology}>
+              {" "}
+              <Image src={expressIcon.src} height={50} width={50} alt="" />{" "}
+              <p>Express.JS</p>
+            </div>
+            <div className={styles.singleTechnology}>
+              {" "}
+              <Image src={mongodbIcon.src} height={50} width={50} alt="" />{" "}
+              <p>MongoDB</p>
+            </div>
+            <div className={styles.singleTechnology}>
+              {" "}
+              <Image src={gitIcon.src} height={50} width={50} alt="" />{" "}
+              <p>Git</p>
+            </div>
+          </div>
+        </div>
         <div className={styles.textContainer}>
           <h2 className={styles.mainTitle}>
             {" "}

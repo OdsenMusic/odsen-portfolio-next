@@ -10,7 +10,7 @@ const ExperienceCard = () => {
   return (
     <div className={styles.cardContainer}>
       <h3 className={styles.experienceTitle}>
-        Music producer <p className={styles.time}>Jun. 2020 - actualidad</p>
+        Music producer <p className={styles.time}>Jun. 2020 - Oct 2023</p>
         <Image
           className={styles.sideIcon}
           src={equalizerIcon.src}
@@ -20,30 +20,37 @@ const ExperienceCard = () => {
         />
       </h3>
       <div className={styles.experienceTextContainer}>
-        <p className={styles.company}>Monstercat</p>
+        <a
+          style={{ textDecoration: "none", cursor: "pointer" }}
+          href="https://www.monstercat.com/"
+        >
+          <p className={styles.company}>Monstercat</p>
+        </a>
 
         <p className={styles.description}>
-          Como artista Odsen, conseguí poder trabajar con la reputada empresa
-          Monstercat. Mi mùsica ha estado en las radios de todo el mundo y mi
-          canción Horizon ha formado parte del videojuego "Rocket League" y es
-          posible usar mi logo como bandera en el videojuego.
+          As a music producer, Odsen, I've had the opportunity to work with the
+          renowned company Monstercat. My music has been played on radio
+          stations around the world, and my song "Horizon" has been featured in
+          the video game "Rocket League", where my logo can also be used as a
+          flag in the game.
           <ol className={styles.list}>
             <li className={styles.listItem}>
               {" "}
               <div className={styles.point} />
-              In My Bones reached 2.5 million plays and it was featured on
-              Apple's most notable playlist in the genre.
+              "In My Bones" achieved a remarkable milestone with 2.5 million
+              plays and earned a spot on Apple Music's most prestigious playlist
+              for its genre.
             </li>
             <li className={styles.listItem}>
               {" "}
               <div className={styles.point} />
-              My music has been heard from fans all around the globe.
+              My music has resonated with fans across the globe.
             </li>
             <li className={styles.listItem}>
               {" "}
               <div className={styles.point} />{" "}
               <div>
-                I have worked personally with artists like{" "}
+                I have worked hand by hand with artists like{" "}
                 <a
                   className={styles.linkto}
                   href="https://en.wikipedia.org/wiki/Christian_Burns"
@@ -61,7 +68,19 @@ const ExperienceCard = () => {
                 .
               </div>
             </li>
-            <li></li>
+            <li className={styles.listItem}>
+              {" "}
+              <div className={styles.point} />I have collaborated with the
+              Australian company Zenhiser, focusing on sound design and field
+              recordings.
+            </li>
+
+            <li className={styles.listItem}>
+              {" "}
+              <div className={styles.point} />
+              English served as the language of communication with companies,
+              other producers and managers.
+            </li>
           </ol>
         </p>
       </div>
