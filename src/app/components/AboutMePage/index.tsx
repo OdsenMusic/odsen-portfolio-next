@@ -69,6 +69,7 @@ type StaticExperienceCardProps = {
   company: string;
   time: string;
   description: string;
+  education?: boolean;
 };
 
 // ExperienceCard Component (for static content, adjust as needed or reuse original component)
@@ -78,8 +79,11 @@ const StaticExperienceCard: React.FC<StaticExperienceCardProps> = ({
   company,
   time,
   description,
+  education = false,
 }) => (
-  <article className={styles.cardContainerNormal}>
+  <article
+    className={`${styles.cardContainerNormal} ${education && styles.education}`}
+  >
     <h3 className={styles.experienceTitle}>
       {title}{" "}
       <Image
@@ -107,7 +111,7 @@ type TechnologyCardProps = {
 // TechnologyCard Component
 const TechnologyCard: React.FC<TechnologyCardProps> = ({ src, alt, text }) => (
   <article className={styles.singleTechnology}>
-    <Image src={src} height={50} width={50} alt={alt} />
+    <Image src={src} height={40} width={40} alt={alt} />
     <p>{text}</p>
   </article>
 );
@@ -215,21 +219,22 @@ const AboutMePage = () => {
               title="Delivery driver"
               company="Amazon"
               time="May 2022 - Oct 2023"
-              description="This challenging job helped me save enough to finance my master's in web programming."
+              description="With a year of experience under my belt, I became one of the company's fastest and most efficient delivery drivers. Handling the delivery of around 200 packages daily, this challenging role was not only demanding but also financially rewarding."
             />
             <StaticExperienceCard
               icon={printerIcon.src}
               title="Administrative"
               company="Roler"
               time="Oct 2019 - Sep 2020"
-              description="In this role, my responsibilities included managing incoming trucks, preparing delivery notes, and ensuring all documentation was accurate."
+              description="Managing incoming trucks, preparing accurate delivery notes, and maintaing
+              documentation to ensure efficiency and compliance where the primary tasks involved in this job experience"
             />
             <StaticExperienceCard
               icon={hamIcon.src}
               title="Food Handler"
               company="Ibericus"
               time="Sep 2018 - Oct 2019"
-              description="My first job involved the primary task of slicing ham and packaging it for sale."
+              description="Preparing, slicing and packaging ham its for sale were the main tasks on my first job."
             />{" "}
           </div>
         </div>
@@ -246,26 +251,30 @@ const AboutMePage = () => {
               icon={codeIconWhite.src}
               title=" Master in Full Stack Development"
               company="Nuclio Digital School"
-              time="May 2022 - Oct 2023"
-              description="This is the most enjoyable educational center I have ever
-              attended. Thanks to my esteemed professors, I now possess
-              extensive knowledge about the development world."
+              time="Oct 2023 - Mar 2023"
+              description=" graduated with a remarkable score of 9.94/10. My To Do App project was acclaimed as the 
+              best in the school's history, while my final web page Gloton was celebrated as the most 
+              aesthetically pleasing app ever created at the institution."
+              education={true}
             />
             <StaticExperienceCard
               icon={hamIcon.src}
               title="Degree in Food Science"
               company="UAB"
               time="Sep 2016 - Jun 2020"
-              description="At university is where I learned math, physics, critical
-              thinking, how to speak, and how to articulate my ideas
-              properly."
+              description="While my university studies weren't directly related to software development, they were 
+              foundational in mastering math and physics, enhancing my critical thinking skills, and refining 
+              my ability to speak and articulate ideas effectively"
+              education={true}
             />
             <StaticExperienceCard
               icon={chemistryIcon.src}
               title="Scientific Bachelor's Degree"
-              company="UAB"
-              time="INS Viladecavalls"
-              description="All my passion for science stems from this experience."
+              company="INS Viladecavalls"
+              time="Sep 2014 - Jun 2016"
+              description="Graduated with 10/10 in physics and 9/10 in math. All my passion for science and technology 
+              stems from this experience"
+              education={true}
             />{" "}
           </div>
         </div>
