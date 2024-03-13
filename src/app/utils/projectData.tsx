@@ -94,7 +94,7 @@ export const taskerProject = {
     </>
   ),
   github: "https://github.com/nds-fsd/reto-6-todo-app-OdsenMusic",
-  website: "https://odsen.vercel.app/projects/",
+  website: "https://odsentasker.vercel.app/",
 };
 
 export const calculatorProject = {
